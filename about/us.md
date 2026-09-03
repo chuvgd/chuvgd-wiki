@@ -1,14 +1,14 @@
 ---
-title: 关于我们
+title: 关于队伍
 description: 
 published: true
-date: 2026-09-03T12:46:40.681Z
+date: 2026-09-03T13:26:01.851Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-03T12:46:40.681Z
 ---
 
-# 关于我们
+# 关于队伍
 
 ## 我们是谁
 
