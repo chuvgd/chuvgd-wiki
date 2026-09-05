@@ -2,7 +2,7 @@
 title: 算法组夏招入队考核
 description: 
 published: true
-date: 2026-09-05T05:38:31.988Z
+date: 2026-09-05T07:10:55.098Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-04T14:56:20.182Z
@@ -20,7 +20,7 @@ dateCreated: 2026-09-04T14:56:20.182Z
 ## task1 信息收集
 
 - 完成以下题目时，需要把相关的思路概述出来，且使用md文档格式，此处不准使用AI，对于md文档是人工手写还是AI化出来的，一眼就能看出来
-- 给出RoboMaster赛事RMUC2026赛事规则和-机器人制作规范以及通信协议的网站链接
+- 给出RoboMaster赛事RMUC2026赛事规则和机器人制作规范以及通信协议的网站链接
 - 把你完成下面题目的AI和查找的文档或者其他资料罗列出来
 
 ## task2 调用海康相机画面
@@ -33,11 +33,11 @@ dateCreated: 2026-09-04T14:56:20.182Z
 
 按照task2里面的代码结构要求，实现对task1里面的海康相机调用后进行一个PNP解算，并在md文件中对整个操作流程进行解释，同时希望能引入对相关知识点的理解
 
-注：相机内参的标定自行思考和解决，但是队伍会提供相关标定板
+注：相机内参的标定自行思考和解决，但是队伍会提供相关标定板以及装甲板，具体装甲板尺寸查阅RMUC2026赛事规则
 
 ## task4 对装甲板进行识别
 
-完成上述相机调用和解算之后，需要进行对装甲板目标的识别，这里为了验收假期学习的内容，此处的识别只要用cv库识别相关灯条，并结合task3中解算的结果，在图像中展示识别结果
+完成上述相机调用和解算之后，需要进行对装甲板目标的识别，这里为了验收假期学习的内容，此处的识别只要用opencv库识别相关灯条，并结合task3中解算的结果，在图像中展示识别结果
 
 ## task5 写一个小的串口demo（选做）
 
@@ -45,13 +45,18 @@ dateCreated: 2026-09-04T14:56:20.182Z
 
 ```cpp
 struct auto_aim{
-    double pitch;
-    double yaw;
-    bool control;
-    bool fire;
+    float pitch;
+    float yaw;
+    uint8_t control;
+    uint8_t fire;
 }__attribute__((packed));
 ```
 
 只要做到：对串口进行定向，设置串口规则权限，进行串口打开，发送这个结构体相关内容，如果完成单独和我说，我会安排电控那边进行通信
+学习链接：
+
+- [https://zhuanlan.zhihu.com/p/656211080](https://zhuanlan.zhihu.com/p/656211080)
+
+- [https://blog.csdn.net/qq_33274985/article/details/145065497](https://blog.csdn.net/qq_33274985/article/details/145065497)
 
 完成思路和对串口的学习认识也一并写在md中
