@@ -2,7 +2,7 @@
 title: 电控组入队考核
 description: 
 published: true
-date: 2026-09-05T07:13:32.617Z
+date: 2026-09-06T14:16:38.369Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-04T12:04:10.838Z
