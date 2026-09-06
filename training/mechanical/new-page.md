@@ -1,14 +1,14 @@
 ---
-title: mechanical  assessment task
+title: 27 赛季夏季考核任务
 description: summer  recruitment
 published: true
-date: 2026-09-06T14:09:29.866Z
+date: 2026-09-06T14:10:42.470Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-05T08:56:40.783Z
 ---
 
-# 机械组培训
+# 27 赛季夏季考核任务
     
 > 引言：夏招培训更看重对理论知识的理解与思考，单一照搬其他学校的开源不能达到入队就上手的程度，笔者基于2026年规则给出27赛季夏季考核任务，有不标准或不恰当的地方还请批评指正
 
