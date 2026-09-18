@@ -1,14 +1,14 @@
 ---
-title: 编程入门指南
+title: 编程
 description: 
 published: true
-date: 2026-09-15T17:36:26.810Z
+date: 2026-09-18T18:08:24.806Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-07T02:00:09.292Z
 ---
 
-# 编程入门指南 - 0
+# 编程
 
 机器人队的工作主要在嵌入式和Linux上，主要的编程语言包括 C、C++、Python，并且 Matlab 也是一个重要的工具。
 
