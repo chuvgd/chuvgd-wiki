@@ -2,7 +2,7 @@
 title: 培训
 description: 
 published: true
-date: 2026-09-19T11:59:37.851Z
+date: 2026-09-19T14:01:30.595Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-07T09:17:14.487Z
@@ -15,6 +15,14 @@ dateCreated: 2026-09-07T09:17:14.487Z
 <!--
 - [秋招培训总体计划](/training/plan)
 -->
+
+## 课程目录
+
+- [基础通识](/training/common)
+- [机械](/training/mechanical)
+- [编程](/training/programming)
+- [控制](/training/control)
+- [算法](/training/algorithm)
 
 ## 秋招培训总体介绍
 
