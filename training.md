@@ -2,7 +2,7 @@
 title: 培训
 description: 
 published: true
-date: 2026-09-19T14:01:30.595Z
+date: 2026-09-19T14:10:46.342Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-07T09:17:14.487Z
@@ -12,11 +12,11 @@ dateCreated: 2026-09-07T09:17:14.487Z
 
 这里是 VGD**2026** 培训体系的导航页，主要包括 **资源链接** 和 **培训文档**。
 
-<!--
-- [秋招培训总体计划](/training/plan)
--->
-
 ## 课程目录
+
+- [秋招培训总体计划](/training/plan)
+
+具体课程系列：
 
 - [基础通识](/training/common)
 - [机械](/training/mechanical)
