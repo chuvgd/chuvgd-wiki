@@ -1,14 +1,14 @@
 ---
-title: 队内手册
+title: 手册
 description: 
 published: true
-date: 2026-09-20T13:28:43.016Z
+date: 2026-09-20T14:19:17.411Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-07T09:19:37.575Z
 ---
 
-# 队内手册
+# 团队手册
 
 用于保存队伍内部资料和文档，例如队伍制度手册、工作规范等等
 
