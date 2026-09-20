@@ -2,7 +2,7 @@
 title: 培训
 description: 
 published: true
-date: 2026-09-20T09:40:48.792Z
+date: 2026-09-20T09:42:13.641Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-07T09:17:14.487Z
@@ -104,7 +104,7 @@ dateCreated: 2026-09-07T09:17:14.487Z
 
 ```mermaid
 gantt
-    title VGD 2026 秋招培训甘特图（1课时=1w，0课时不占）
+    title VGD 2026 秋招培训甘特图
     dateFormat YYYY-MM-DD
     axisFormat %m/%d
     todayMarker off
