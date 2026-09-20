@@ -1,14 +1,14 @@
 ---
-title: 这里是技术文档！！！
+title: 技术文档
 description: 
 published: true
-date: 2026-09-20T14:13:37.948Z
+date: 2026-09-20T14:14:32.756Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-20T14:08:08.124Z
 ---
 
-# 这里是技术文档！
+# 这里是技术文档！！！
 
 在 `/document/` 文件夹下，可以放置所有你们的技术文章，包括但不限于：
 
