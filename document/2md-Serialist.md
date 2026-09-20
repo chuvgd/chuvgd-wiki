@@ -2,7 +2,7 @@
 title: 各种文档转 Markdown 格式的方法
 description: 
 published: true
-date: 2026-09-20T14:35:35.496Z
+date: 2026-09-20T14:36:24.378Z
 tags: markdown
 editor: markdown
 dateCreated: 2026-09-20T14:35:35.496Z
@@ -26,11 +26,11 @@ PDF 文件可以分两种：普通、图片扫描（即 OCR）
 
 用 PDFgear 打开文件，在顶部菜单栏选择 `工具`->`转换`->`PDF转HTML`，然后生成导出
 
-![image-20260822215011578](/ducoment/assets/2md-image-20260822215011578.webp)
+![image-20260822215011578](/document/assets/2md-image-20260822215011578.webp)
 
-![image-20260822215122162](/ducoment/assets/2md-image-20260822215122162.webp)
+![image-20260822215122162](/document/assets/2md-image-20260822215122162.webp)
 
 会在目标文件夹生成两个东西：一个是HTML文件（主要是带排版的文本）、一个叫做`image`的文件夹（包括PDF中所有图片）
-![image-20260822215649824](/ducoment/assets/2md-image-20260822215649824.webp)
+![image-20260822215649824](/document/assets/2md-image-20260822215649824.webp)
 
 这时候你就成功把图片和文本分开了，这样你可以拿着 html 文件变成 markdown。记得要处理 md 文件中图片的链接路径哦！
