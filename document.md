@@ -2,7 +2,7 @@
 title: 技术文档！！！
 description: 
 published: true
-date: 2026-09-20T14:09:58.001Z
+date: 2026-09-20T14:10:48.842Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-20T14:08:08.124Z
@@ -32,7 +32,7 @@ dateCreated: 2026-09-20T14:08:08.124Z
   </div>
   
   <div class="doc-form-row">
-    <label for="doc-name">名字</label>
+    <label for="doc-name">你的名字</label>
     <input type="text" id="doc-name" placeholder="请输入你的名字 / 昵称" autocomplete="off">
     <div class="doc-form-hint" id="doc-name-hint"></div>
   </div>
