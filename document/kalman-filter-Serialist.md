@@ -2,7 +2,7 @@
 title: 卡尔曼滤波
 description: 
 published: true
-date: 2026-09-20T14:17:42.425Z
+date: 2026-09-20T17:57:56.659Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-20T14:17:42.425Z
@@ -94,10 +94,10 @@ graph LR
 3[最优化拟合/卡尔曼增益]
 4{结束}
 
-0 --$$\hat x_{k-1}^+（P^+_{k-1}）$$--> 1
-1 --$$\hat x_k^-（P_k^-）$$--> 3
-2 --$$z_k（R）$$--> 3
-3 --$$\hat x_k^+（P_k^+）$$--> 4
+0 --> 1
+1 --> 3
+2 --> 3
+3 --> 4
 ```
 
 <h3 style = "text-align: center">预测</h3>
