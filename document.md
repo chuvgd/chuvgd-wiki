@@ -1,8 +1,8 @@
 ---
-title: 技术文档！！！
+title: 这里是技术文档！！！
 description: 
 published: true
-date: 2026-09-20T14:10:48.842Z
+date: 2026-09-20T14:13:37.948Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-20T14:08:08.124Z
@@ -25,20 +25,23 @@ dateCreated: 2026-09-20T14:08:08.124Z
 
 下面是一个简单的创建工具：
 
+<!-- 工具开始 -->
+
 <div class="doc-create-form">
   <div class="doc-form-row">
     <label for="doc-title">文章名</label>
     <input type="text" id="doc-title" placeholder="请输入文章名" autocomplete="off">
+    <div class="doc-form-hint" id="doc-title-hint"></div>
   </div>
-  
+
   <div class="doc-form-row">
-    <label for="doc-name">你的名字</label>
+    <label for="doc-name">名字</label>
     <input type="text" id="doc-name" placeholder="请输入你的名字 / 昵称" autocomplete="off">
     <div class="doc-form-hint" id="doc-name-hint"></div>
   </div>
 
   <div class="doc-form-note">
-    命名规范：只能使用 - _ 符号，不区分大小写；建议使用英文和数字而非汉字；如果跳转后进入的是编辑页面，说明该名字已被占用。
+    命名规范：只能使用字母、数字、汉字、<code>-</code>、<code>_</code> 符号；<strong>区分大小写</strong>；建议尽量使用英文和数字，使用汉字会收到警告；如果跳转后进入编辑页面，说明该名字已被占用。
   </div>
 
   <div class="doc-form-actions">
@@ -46,3 +49,5 @@ dateCreated: 2026-09-20T14:08:08.124Z
     <button type="button" id="doc-reset">清空</button>
   </div>
 </div>
+
+<!-- 工具结束 -->
