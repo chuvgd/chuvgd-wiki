@@ -2,7 +2,7 @@
 title: 算法
 description: 
 published: true
-date: 2026-09-19T08:15:02.915Z
+date: 2026-09-20T13:19:34.761Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T08:15:02.915Z
@@ -30,5 +30,10 @@ dateCreated: 2026-09-19T08:15:02.915Z
 - ~~运动控制~~
 
 ## 培训资料目录
+
+
+- *by Radar AlwaysLC$^2$*
+    - [【我租赁了1000000张显卡】- 如何租算力服务器](https://www.bilibili.com/video/BV1Lc8F6qEPY/)
+    - [【为了记住你只好把你练成模型🥲】- 如何训练模型&评价模型训练效果](https://www.bilibili.com/video/BV1p1bf6mE4h/)
 
 ## 参考文献&其他队伍的资料
