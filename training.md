@@ -2,7 +2,7 @@
 title: 培训
 description: 
 published: true
-date: 2026-09-20T09:40:37.572Z
+date: 2026-09-20T09:40:48.792Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-07T09:17:14.487Z
@@ -90,7 +90,7 @@ dateCreated: 2026-09-07T09:17:14.487Z
 6. 电子基础
 7. 算法基础
     - 了解 Linux 和 ROS2，基础使用
-    - openmv，机器视觉
+    - opencv，机器视觉
 8. 机械基础
     - 机械结构
     > TODO
