@@ -2,15 +2,13 @@
 title: 如何自学/提问/检索信息
 description: 
 published: true
-date: 2026-09-21T13:46:35.588Z
+date: 2026-09-21T13:48:16.802Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-21T13:40:14.290Z
 ---
 
 # 如何自学/提问/检索信息
-
-https://bbs.robomaster.com/article/810096?source=1
 
 ## 如何学习
 参加机器人比赛，你将面对的不仅仅是应用一些课本的内容，更多的是涉及工程实践，解决实际问题。这其中囊括了非常多方面的知识，没有任何单一的课程，体系能够让你从入门到入土，也并没有时间能够让你学完所有知识再去应用。因此在这里有必要提醒各位怎样学习适应这样的环境。
@@ -20,23 +18,21 @@ https://bbs.robomaster.com/article/810096?source=1
 
 更有源神把他们的培训开源了出来，放在了b站，供大家参考学习。因此这里放一些非常有价值的其他学校的培训课程给大家参考。只要你有心，肯定是能够学到不少东西的。
 
-同济26赛季培训 https://space.bilibili.com/651837546/lists/6386496?type=season
-
-中科大电控培训 https://space.bilibili.com/337732684/lists/1043942?type=season
-
-南科大25赛季培训 https://space.bilibili.com/645940972/lists/6284851?type=season
+- [同济26赛季培训](https://space.bilibili.com/651837546/lists/6386496?type=season )
+- [中科大电控培训](https://space.bilibili.com/337732684/lists/1043942?type=season )
+- [南科大25赛季培训](https://space.bilibili.com/645940972/lists/6284851?type=season )
 
 ### 有关学习思路与路径
+
 对于机械来说，理论的知识体系学习并不适用于所有的场景。厉害的机械工程师的知识面是非常广的，因此主动思考，搜索不同设计的方案，利用b站和淘宝，能够有更好的收获。当然，前辈的经验也可
 
-对于电控，参考电控组培训文档，已经很详细了
+- 对于电控，参考电控组培训文档，已经很详细了
 
-对于硬件，推荐一些b站的各个大厂的账号（德州仪器，MPS芯源系统），有很多视频公开课能够帮助你学习。以及b站账号（工科男孙老师，expert电子实验室，JT硬件乐趣），也可以参考硬件组知识库Readme&学习路径
+- 对于硬件，推荐一些b站的各个大厂的账号（德州仪器，MPS芯源系统），有很多视频公开课能够帮助你学习。以及b站账号（工科男孙老师，expert电子实验室，JT硬件乐趣），也可以参考硬件组知识库Readme&学习路径
 
-对于视觉，不清楚，说不定notion上有帮我写写（
+- 对于视觉，不清楚，说不定notion上有帮我写写（
 
-适合RMer的学习指南
-请阅读https://bbs.robomaster.com/article/810113?source=1
+请阅读：[适合RMer的学习指南](https://bbs.robomaster.com/article/810113?source=1)
 
 ## 如何搜索
 
