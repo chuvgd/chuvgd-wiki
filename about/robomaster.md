@@ -2,7 +2,7 @@
 title: 关于 RoboMaster 比赛
 description: 
 published: true
-date: 2026-09-21T07:18:04.066Z
+date: 2026-09-21T07:19:21.377Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-21T06:39:16.775Z
