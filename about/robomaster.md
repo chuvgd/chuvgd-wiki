@@ -2,7 +2,7 @@
 title: 关于 RoboMaster 比赛
 description: 
 published: true
-date: 2026-09-21T07:19:21.377Z
+date: 2026-09-21T07:29:36.550Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-21T06:39:16.775Z
@@ -13,7 +13,8 @@ dateCreated: 2026-09-21T06:39:16.775Z
 
 你是否幻想过亲手造出一台属于自己的战斗机器人，在赛场上和其他高校的机甲展开激烈对抗？
 
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=117122097218650&bvid=BV1aN8n6sEUU&cid=41069383583&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+- *点击查看视频内容*
+    [![RoboMaster 2026 全国总决赛超燃混剪](https://i1.hdslb.com/bfs/archive/5c5c6fce6a8038c5a54095d799296f6f73451abf.jpg)](https://www.bilibili.com/video/BV1aN8n6sEUU/?share_source=copy_web&vd_source=a0b30c57e9db0024aafc5b552bf0e321)
 
 ---
 
