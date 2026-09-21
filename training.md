@@ -2,7 +2,7 @@
 title: 培训
 description: 
 published: true
-date: 2026-09-20T18:03:32.853Z
+date: 2026-09-21T12:08:48.407Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-07T09:17:14.487Z
@@ -25,7 +25,7 @@ dateCreated: 2026-09-07T09:17:14.487Z
 - [基础通识](/training/common)
 - [机械](/training/mechanical)
 - [编程](/training/programming)
-- [嵌入式](/training/)
+- [嵌入式](/training/embedded)
 - [控制](/training/control)
 - [算法](/training/algorithm)
 
