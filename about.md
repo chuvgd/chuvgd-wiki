@@ -2,13 +2,17 @@
 title: 关于
 description: 
 published: true
-date: 2026-09-19T14:34:20.584Z
+date: 2026-09-22T07:42:24.914Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-04T04:36:12.119Z
 ---
 
 # 关于我们
+
+## 比赛介绍
+
+- [关于 RoboMaster 大赛](/about/robomaster)
 
 ## 队伍介绍
 
