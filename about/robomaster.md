@@ -2,7 +2,7 @@
 title: 关于 RoboMaster 比赛
 description: 
 published: true
-date: 2026-09-22T07:39:08.769Z
+date: 2026-09-22T07:40:18.033Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-21T06:39:16.775Z
@@ -18,7 +18,7 @@ dateCreated: 2026-09-21T06:39:16.775Z
 
 ---
 
-RoboMaster 由 DJI 大疆举办，是面向全球大学生的机器人科创赛事，已经举办了<span class="show-anniversary" data-begin="2013"></span>年，是顶级大学生机器人竞技平台。在这里，每年汇聚数百所高校青年工程师，让创想落地，让梦想飞驰。
+RoboMaster 机甲大师机器人大赛由 DJI 大疆举办，至今已举办<span class="show-anniversary" data-begin="2013"></span>年，是面向全球大学生的顶级机器人竞技平台。在这里，每年汇聚数百所高校青年工程师，让创想落地，让梦想飞驰。
 
 这里没有“纸上谈兵”的习题，所有参赛战队都要独立自主完成全套机器人的设计、装配、焊接、编程、调试。整个机器人完全由队员亲自打造。这是一台可以上场作战的机器人，背后融合机械、电子、嵌入式、控制、视觉、SLAM、智能决策等众多领域的知识。你可以:
 
