@@ -2,7 +2,7 @@
 title: 基础通识
 description: 
 published: true
-date: 2026-09-21T13:42:48.133Z
+date: 2026-09-22T08:47:04.176Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:20:09.990Z
@@ -28,4 +28,4 @@ dateCreated: 2026-09-18T18:20:09.990Z
 5. [物资和设备使用常识](/training/common/tools)
 6. [如何自学/提问/检索信息](/training/common/howtodo)
 
-这些知识是所有 VGD 队员需要掌握的知识，即是课程，也是手册。
+这些知识是所有 VGD 队员需要了解的内容，包括一些基本技术和团队合作素养。
