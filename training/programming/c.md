@@ -2,13 +2,13 @@
 title: C 语言
 description: 
 published: true
-date: 2026-09-22T09:05:03.566Z
+date: 2026-09-22T09:05:10.339Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-15T17:48:18.998Z
 ---
 
-# C 语言第0课
+# C 语言
 
 我们决定从 C 语言开始，是因为他太过于基础，也最适合入门。（有人认为 python 更容易理解，但他对我们学习其他语言没什么好处）
 
