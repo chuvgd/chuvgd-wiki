@@ -2,7 +2,7 @@
 title: 技术文档
 description: 
 published: true
-date: 2026-09-20T14:14:32.756Z
+date: 2026-09-22T07:21:26.687Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-20T14:08:08.124Z
@@ -18,7 +18,6 @@ dateCreated: 2026-09-20T14:08:08.124Z
 
 希望大家积极发表文章，积累经验，为 VGD 传承和协作付出贡献！
 
----
 ## 创建新文章
 
 你可以在 `/document/` 文件夹下创建命名为 `文章标题-你的名字` 的页面（约定）。
@@ -51,3 +50,8 @@ dateCreated: 2026-09-20T14:08:08.124Z
 </div>
 
 <!-- 工具结束 -->
+
+## 文件归档
+
+<!-- 目录 -->
+<div id="pageTree">Loading pages ...</div>
