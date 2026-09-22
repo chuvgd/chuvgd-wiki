@@ -2,7 +2,7 @@
 title: 27 赛季夏季考核任务
 description: summer  recruitment
 published: true
-date: 2026-09-06T14:10:42.470Z
+date: 2026-09-22T08:31:17.194Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-05T08:56:40.783Z
