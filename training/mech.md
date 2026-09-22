@@ -2,11 +2,14 @@
 title: 机械
 description: 
 published: true
-date: 2026-09-22T08:29:58.412Z
+date: 2026-09-22T08:46:04.422Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:02:09.494Z
 ---
+
+> 一下内容由 吴锦泽 编写，具体内容可以参考或修改
+> 这个页面是 机械组培训内容 的导航页，可以参考 [通识培训](/training/common) 的编写方式
 
 # 机械学习
 
