@@ -2,7 +2,7 @@
 title: 关于比赛
 description: 
 published: true
-date: 2026-09-21T13:02:57.362Z
+date: 2026-09-23T12:43:44.818Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T17:58:17.167Z
@@ -10,7 +10,63 @@ dateCreated: 2026-09-18T17:58:17.167Z
 
 # RoboMaster 入坑指南
 
-RoboMaster（简称RM）是由 DJI 大疆发起的全球机器人比赛，包含多项赛事：
+RoboMaster（RM）是由 DJI 大疆发起的大学生机器人大赛。
+
+如果你还不是很了解RM的比赛，那么下面的资料能够帮助你建立一个基本的认知，希望你能从比赛视频中找到对于比赛的热情！
+
+## 比赛介绍
+
+[RoboMaster 高校系列赛](https://www.robomaster.com/zh-CN/robo/overview?djifrom=homepage)
+
+[RoboMaster 机甲大师超级对抗赛介绍](https://www.robomaster.com/zh-CN/robo/rm?djifrom=rmu1)
+
+[RoboMaster 高校联盟赛](https://www.robomaster.com/zh-CN/robo/college-league?djifrom=overview_tab1)
+
+## 官方媒体
+
+### B站
+
+赛事官方b站，发布比赛、兵种介绍等等：[RoboMaster机甲大师](https://space.bilibili.com/20554233)
+
+赛务b站，发布各种分享会回放：[RoboMaster赛务君](https://space.bilibili.com/1672842853)
+
+### 赛事直播与回放
+
+赛事直播 [RoboMaster 2026 超级对抗赛·全国总决赛|直播](https://www.robomaster.com/live )
+
+### 2026回放合集
+
+[RMUC 2026 全国赛 比赛回放](https://space.bilibili.com/20554233/lists/8746598?type=season)
+
+[RMUC 2026 复活赛 比赛回放](https://space.bilibili.com/20554233/lists/8716384?type=season)
+
+[RMUC 2026 区域赛·北部赛区 比赛回放](https://space.bilibili.com/20554233/lists/8208439?type=season)
+
+[RMUC 2026 区域赛·东部赛区 比赛回放](https://space.bilibili.com/20554233/lists/8156146?type=season)
+
+[RMUC 2026 区域赛·南部赛区 比赛回放](https://space.bilibili.com/20554233/lists/8110609?type=season)
+
+### 精彩对局
+
+[载入历史的对局！｜全国赛 第九十三场 华南农业大学 Taurus战队 VS 华东理工大学 起源战队 RoboMaster 2026 超级对抗赛 全国总决赛](https://www.bilibili.com/video/BV1H3uj6GEdu/)
+
+[全国赛 第九十六场 华南农业大学 Taurus战队 VS 东北大学 TDT战队 RoboMaster 2026 超级对抗赛 全国总决赛](https://www.bilibili.com/video/BV1SVum63E7c)
+
+### 有关资料
+
+对于比赛有一个基本了解之后，你可能希望知道的更多
+
+赛事官网 [https://www.robomaster.com/](https://www.robomaster.com/ )
+
+赛事通知与技术交流，RM鼓励开放的比赛生态，所以常常能够在论坛上看到优秀的开源 [https://bbs.robomaster.com/](https://bbs.robomaster.com/ )
+
+其中，官方资料发布于 [https://bbs.robomaster.com/wiki/20204847]()
+
+rm有很多自组织的交流群，比如RM工程交流群，RM步兵哨兵合家欢等等，这些交流群里可以和其他战队的队员进行技术交流和问答（万能群友），但是消息比较杂（容易水群），需要自行判断甄别。同时，群内也有很多技术很好的老队员，如果希望得到他们的解答，也请遵循下方的提问的艺术。
+
+## 赛事分类
+
+RM 包含多项赛事：
 
 1. **高校联盟赛（RMUL）**
     - 3v3 对抗赛：步兵、重装、哨兵三个兵种，3v3 互相对抗
@@ -106,3 +162,7 @@ gantt
     复活赛: 2026-07-31, 2d
     全国总决赛 深圳春茧体育馆: 2026-08-02, 7d
 ```
+
+## Reference
+
+[pnx战队文档](https://hkustgz-robomaster-pnx.github.io/training/ )
