@@ -2,7 +2,7 @@
 title: 机械知识通识
 description: 
 published: true
-date: 2026-09-23T12:50:56.422Z
+date: 2026-09-23T12:53:20.946Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-21T13:36:43.072Z
@@ -14,5 +14,6 @@ dateCreated: 2026-09-21T13:36:43.072Z
 
 参考文献：https://bbs.robomaster.com/article/1945317?source=1
 
-<iframe src="https://bbs.robomaster.com/article/1945317?source=1">
-</iframe>
+<div class="iframe-box">
+  <iframe src="https://bbs.robomaster.com/article/1945317?source=1"></iframe>
+</div>
