@@ -2,11 +2,23 @@
 title: 电子通识
 description: 
 published: true
-date: 2026-09-24T07:32:19.603Z
+date: 2026-09-24T08:01:24.888Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-24T07:32:19.603Z
 ---
 
-# Header
-Your content here
+# 电子通识
+## 接线
+- 理解电压概念（共地意识）
+- 小心短路（做好绝缘保护）
+## 系统供电方式
+- 杜邦线
+- 面包板
+- 洞洞板
+- 简单拓展版
+## 能量去向
+- 热量耗散
+- 做功
+## 电压电流状态
+- 小心过压过流的情况
