@@ -2,7 +2,7 @@
 title: 技术文档
 description: 
 published: true
-date: 2026-09-25T06:58:34.061Z
+date: 2026-09-25T07:00:08.463Z
 tags: 
 editor: code
 dateCreated: 2026-09-20T14:08:08.124Z
@@ -24,56 +24,46 @@ dateCreated: 2026-09-20T14:08:08.124Z
 
 <div id="doc-toolkit" class="dt-root">
 
-  <!-- ================= 工具一：创建文章 ================= -->
-  <section class="dt-card">
-    <header class="dt-card-head">
-      <span class="dt-card-icon">✏️</span>
-      <h3 class="dt-card-title">创建新文章</h3>
-    </header>
+  <section class="dt-section">
+    <h3 class="dt-title">创建新文章</h3>
 
-    <div class="dt-body">
-      <div class="dt-field">
-        <label class="dt-label" for="dt-title">文章名</label>
-        <input class="dt-input" type="text" id="dt-title"
-               placeholder="例如：Docker 部署笔记" autocomplete="off" spellcheck="false">
-        <p class="dt-hint" id="dt-title-hint"></p>
-      </div>
+    <div class="dt-field">
+      <label class="dt-label" for="dt-title">文章名</label>
+      <input class="dt-input" type="text" id="dt-title"
+             placeholder="例如：Docker 部署笔记" autocomplete="off" spellcheck="false">
+      <p class="dt-hint" id="dt-title-hint"></p>
+    </div>
 
-      <div class="dt-field">
-        <label class="dt-label" for="dt-name">署名</label>
-        <input class="dt-input" type="text" id="dt-name"
-               placeholder="你的名字或昵称" autocomplete="off" spellcheck="false">
-        <p class="dt-hint" id="dt-name-hint"></p>
-      </div>
+    <div class="dt-field">
+      <label class="dt-label" for="dt-name">署名</label>
+      <input class="dt-input" type="text" id="dt-name"
+             placeholder="你的名字或昵称" autocomplete="off" spellcheck="false">
+      <p class="dt-hint" id="dt-name-hint"></p>
+    </div>
 
-      <p class="dt-preview" id="dt-preview"></p>
+    <p class="dt-preview" id="dt-preview"></p>
 
-      <p class="dt-note">
-        只能使用<strong>字母、数字、汉字</strong>与 <code>-</code> <code>_</code>；
-        <strong>区分大小写</strong>；建议使用英文和数字。若跳转后进入编辑页，说明该名字已被占用。
-      </p>
+    <p class="dt-note">
+      只能使用<strong>字母、数字、汉字</strong>与 <code>-</code> <code>_</code>；
+      <strong>区分大小写</strong>；建议使用英文和数字。若跳转后进入编辑页，说明该名字已被占用。
+    </p>
 
-      <div class="dt-actions">
-        <button class="dt-btn dt-btn--primary" type="button" id="dt-confirm">创建</button>
-        <button class="dt-btn dt-btn--ghost" type="button" id="dt-reset">清空</button>
-      </div>
+    <div class="dt-actions">
+      <button class="dt-btn dt-btn--primary" type="button" id="dt-confirm">创建</button>
+      <button class="dt-btn dt-btn--ghost" type="button" id="dt-reset">清空</button>
     </div>
   </section>
 
-  <!-- ================= 工具二：文档列表 ================= -->
-  <section class="dt-card">
-    <header class="dt-card-head">
-      <span class="dt-card-icon">📚</span>
-      <h3 class="dt-card-title">文档列表</h3>
+  <section class="dt-section">
+    <h3 class="dt-title">
+      文档列表
       <span class="dt-count" id="dt-count"></span>
-    </header>
+    </h3>
 
-    <div class="dt-body">
-      <p class="dt-tip">如果你想要搜索，请使用页面顶端的搜索框</p>
+    <p class="dt-tip">如果你想要搜索，请使用页面顶端的搜索框</p>
 
-      <div class="dt-list" id="dt-list">
-        <div class="dt-empty">加载中…</div>
-      </div>
+    <div class="dt-list" id="dt-list">
+      <div class="dt-empty">加载中…</div>
     </div>
   </section>
 
