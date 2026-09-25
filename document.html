@@ -2,7 +2,7 @@
 title: 技术文档
 description: 
 published: true
-date: 2026-09-25T08:10:33.259Z
+date: 2026-09-25T08:15:17.844Z
 tags: 
 editor: code
 dateCreated: 2026-09-20T14:08:08.124Z
@@ -22,31 +22,12 @@ dateCreated: 2026-09-20T14:08:08.124Z
 
 <!---------------------------------------------------------- tool start ------------------------------------------------------------------->
 
-<div id="doc-toolkit">
-  <div class="dt-form">
-    <label for="dt-title">文章名</label>
-    <input type="text" id="dt-title" placeholder="例如：Docker 部署笔记" autocomplete="off" spellcheck="false">
-    <p class="dt-hint" id="dt-title-hint"></p>
+<div class="dt-form"></div>
 
-    <label for="dt-name">署名</label>
-    <input type="text" id="dt-name" placeholder="你的名字或昵称" autocomplete="off" spellcheck="false">
-    <p class="dt-hint" id="dt-name-hint"></p>
+<p>只能使用<strong>字母、数字、汉字</strong>与 <code>-</code> <code>_</code>；<strong>区分大小写</strong>；建议使用英文和数字。若跳转后进入编辑页，说明该名字已被占用。</p>
 
-    <p class="dt-preview" id="dt-preview"></p>
+<h2>文档列表</h2>
 
-    <div class="dt-actions">
-      <button type="button" id="dt-confirm">创建</button>
-      <button type="button" id="dt-reset">清空</button>
-    </div>
-  </div>
+<p>如果你想要搜索，请使用页面顶端的搜索框</p>
 
-  <p>只能使用<strong>字母、数字、汉字</strong>与 <code>-</code> <code>_</code>；<strong>区分大小写</strong>；建议使用英文和数字。若跳转后进入编辑页，说明该名字已被占用。</p>
-
-  <h2>文档列表</h2>
-
-  <p class="dt-tip">如果你想要搜索，请使用页面顶端的搜索框</p>
-
-  <div id="dt-list" class="dt-list">
-    <div class="dt-empty">加载中…</div>
-  </div>
-</div>
+<div id="dt-list" class="dt-list">加载中…</div>
