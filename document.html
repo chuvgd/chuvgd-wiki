@@ -1,0 +1,45 @@
+<!--
+title: 技术文档
+description: 
+published: true
+date: 2026-09-25T06:46:43.517Z
+tags: 
+editor: code
+dateCreated: 2026-09-20T14:08:08.124Z
+-->
+
+<h1 id="这里是技术文档" class="toc-header"> 这里是技术文档！！！</h1>
+<p>在 <code>/document/</code> 文件夹下，可以放置所有你们的技术文章，包括但不限于：</p>
+<ol>
+<li>队内/对外开源</li>
+<li>经验分享</li>
+<li>学习指北/指南</li>
+</ol>
+<p>希望大家积极发表文章，积累经验，为 VGD 传承和协作付出贡献！</p>
+<h2 id="创建新文章" class="toc-header"> 创建新文章</h2>
+<p>你可以在 <code>/document/</code> 文件夹下创建命名为 <code>文章标题-你的名字</code> 的页面（约定）。</p>
+<p>下面是一个简单的创建工具：</p>
+
+<div class="doc-create-form">
+  <div class="doc-form-row">
+    <label for="doc-title">文章名</label>
+    <input type="text" id="doc-title" placeholder="请输入文章名" autocomplete="off">
+    <div class="doc-form-hint" id="doc-title-hint"></div>
+  </div>
+  <div class="doc-form-row">
+    <label for="doc-name">名字</label>
+    <input type="text" id="doc-name" placeholder="请输入你的名字 / 昵称" autocomplete="off">
+    <div class="doc-form-hint" id="doc-name-hint"></div>
+  </div>
+  <div class="doc-form-note">
+    命名规范：只能使用字母、数字、汉字、<code>-</code>、<code>_</code> 符号；<strong>区分大小写</strong>；建议尽量使用英文和数字，使用汉字会收到警告；如果跳转后进入编辑页面，说明该名字已被占用。
+  </div>
+  <div class="doc-form-actions">
+    <button type="button" id="doc-confirm">确定</button>
+    <button type="button" id="doc-reset">清空</button>
+  </div>
+</div>
+
+<h2 id="归档" class="toc-header"> 归档</h2>
+<p>如果你想要搜索，请使用页面顶端的搜索框</p>
+<div id="pageTree">Loading pages ...</div>
