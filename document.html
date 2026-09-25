@@ -2,7 +2,7 @@
 title: 技术文档
 description: 
 published: true
-date: 2026-09-25T06:53:17.399Z
+date: 2026-09-25T06:55:35.240Z
 tags: 
 editor: code
 dateCreated: 2026-09-20T14:08:08.124Z
@@ -20,27 +20,35 @@ dateCreated: 2026-09-20T14:08:08.124Z
 <p>你可以在 <code>/document/</code> 文件夹下创建命名为 <code>文章标题-你的名字</code> 的页面（约定）。</p>
 <p>下面是一个简单的创建工具：</p>
 
+<!---------------------------------------------------------- tool start ------------------------------------------------------------------->
+
 <div id="doc-toolkit" class="dt-root">
+
   <!-- ================= 工具一：创建文章 ================= -->
   <section class="dt-card">
     <h3 class="dt-card-title">📝 创建新文章</h3>
+
     <div class="dt-field">
       <label class="dt-label" for="dt-title">文章名</label>
       <input class="dt-input" type="text" id="dt-title"
              placeholder="请输入文章名" autocomplete="off" spellcheck="false">
       <p class="dt-hint" id="dt-title-hint"></p>
     </div>
+
     <div class="dt-field">
       <label class="dt-label" for="dt-name">名字</label>
       <input class="dt-input" type="text" id="dt-name"
              placeholder="请输入你的名字 / 昵称" autocomplete="off" spellcheck="false">
       <p class="dt-hint" id="dt-name-hint"></p>
     </div>
+
     <p class="dt-preview" id="dt-preview"></p>
+
     <p class="dt-note">
       命名规范：只能使用字母、数字、汉字、<code>-</code>、<code>_</code> 符号；<strong>区分大小写</strong>；
       建议尽量使用英文和数字，使用汉字会收到警告；如果跳转后进入编辑页面，说明该名字已被占用。
     </p>
+
     <div class="dt-actions">
       <button class="dt-btn dt-btn--primary" type="button" id="dt-confirm">确定</button>
       <button class="dt-btn" type="button" id="dt-reset">清空</button>
@@ -50,11 +58,13 @@ dateCreated: 2026-09-20T14:08:08.124Z
   <!-- ================= 工具二：文档列表 ================= -->
   <section class="dt-card">
     <h3 class="dt-card-title">📚 文档列表</h3>
+
     <div class="dt-list-head">
       <input class="dt-input" type="text" id="dt-filter"
              placeholder="输入关键字筛选…" autocomplete="off" spellcheck="false">
       <span class="dt-count" id="dt-count"></span>
     </div>
+
     <div class="dt-list" id="dt-list">
       <div class="dt-empty">加载中…</div>
     </div>
