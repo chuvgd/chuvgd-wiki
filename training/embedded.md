@@ -2,7 +2,7 @@
 title: 嵌入式
 description: 
 published: true
-date: 2026-09-21T12:32:37.250Z
+date: 2026-09-25T09:32:03.124Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-21T12:32:37.250Z
@@ -19,6 +19,6 @@ dateCreated: 2026-09-21T12:32:37.250Z
 3. 时钟，TIM，呼吸灯（0.5）
 4. HAL 库，CubeMX，串口（0.5）
 5. 中断处理，理解通信（0.5）
-6. 还差一节不知道讲什么，实在不行进度再提前一点？
+6. can通信，fdcan通信（1）
 
 
