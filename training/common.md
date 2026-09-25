@@ -2,7 +2,7 @@
 title: 基础通识
 description: 
 published: true
-date: 2026-09-25T09:17:11.123Z
+date: 2026-09-25T11:58:04.471Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:20:09.990Z
@@ -19,7 +19,7 @@ dateCreated: 2026-09-18T18:20:09.990Z
 1. [RM 是什么比赛](/training/common/robomaster)
 2. [我们是什么一个队伍](/training/common/vgd)
 
-**通识知识**：
+**通识技术**：
 
 1. [机器人是什么工作的](/training/common/robot)
 2. [计算机常识](/training/common/computer)
