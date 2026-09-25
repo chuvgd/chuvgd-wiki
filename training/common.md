@@ -2,7 +2,7 @@
 title: 基础通识
 description: 
 published: true
-date: 2026-09-22T08:47:04.176Z
+date: 2026-09-25T09:17:11.123Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:20:09.990Z
@@ -23,7 +23,7 @@ dateCreated: 2026-09-18T18:20:09.990Z
 
 1. [机器人是什么工作的](/training/common/robot)
 2. [计算机常识](/training/common/computer)
-3. [电子常识](/training/common/electric)
+3. [电子常识](/training/common/elec)
 4. [机械常识](/training/common/mech)
 5. [物资和设备使用常识](/training/common/tools)
 6. [如何自学/提问/检索信息](/training/common/howtodo)
