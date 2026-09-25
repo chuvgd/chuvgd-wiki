@@ -2,7 +2,7 @@
 title: 技术文档
 description: 
 published: true
-date: 2026-09-25T06:46:43.517Z
+date: 2026-09-25T06:46:58.597Z
 tags: 
 editor: code
 dateCreated: 2026-09-20T14:08:08.124Z
@@ -20,26 +20,587 @@ dateCreated: 2026-09-20T14:08:08.124Z
 <p>你可以在 <code>/document/</code> 文件夹下创建命名为 <code>文章标题-你的名字</code> 的页面（约定）。</p>
 <p>下面是一个简单的创建工具：</p>
 
-<div class="doc-create-form">
-  <div class="doc-form-row">
-    <label for="doc-title">文章名</label>
-    <input type="text" id="doc-title" placeholder="请输入文章名" autocomplete="off">
-    <div class="doc-form-hint" id="doc-title-hint"></div>
-  </div>
-  <div class="doc-form-row">
-    <label for="doc-name">名字</label>
-    <input type="text" id="doc-name" placeholder="请输入你的名字 / 昵称" autocomplete="off">
-    <div class="doc-form-hint" id="doc-name-hint"></div>
-  </div>
-  <div class="doc-form-note">
-    命名规范：只能使用字母、数字、汉字、<code>-</code>、<code>_</code> 符号；<strong>区分大小写</strong>；建议尽量使用英文和数字，使用汉字会收到警告；如果跳转后进入编辑页面，说明该名字已被占用。
-  </div>
-  <div class="doc-form-actions">
-    <button type="button" id="doc-confirm">确定</button>
-    <button type="button" id="doc-reset">清空</button>
-  </div>
+<div id="doc-toolkit" class="dt-root">
+
+  <!-- ================= 工具一：创建文章 ================= -->
+  <section class="dt-card">
+    <h3 class="dt-card-title">📝 创建新文章</h3>
+
+    <div class="dt-field">
+      <label class="dt-label" for="dt-title">文章名</label>
+      <input class="dt-input" type="text" id="dt-title"
+             placeholder="请输入文章名" autocomplete="off" spellcheck="false">
+      <p class="dt-hint" id="dt-title-hint"></p>
+    </div>
+
+    <div class="dt-field">
+      <label class="dt-label" for="dt-name">名字</label>
+      <input class="dt-input" type="text" id="dt-name"
+             placeholder="请输入你的名字 / 昵称" autocomplete="off" spellcheck="false">
+      <p class="dt-hint" id="dt-name-hint"></p>
+    </div>
+
+    <p class="dt-preview" id="dt-preview"></p>
+
+    <p class="dt-note">
+      命名规范：只能使用字母、数字、汉字、<code>-</code>、<code>_</code> 符号；<strong>区分大小写</strong>；
+      建议尽量使用英文和数字，使用汉字会收到警告；如果跳转后进入编辑页面，说明该名字已被占用。
+    </p>
+
+    <div class="dt-actions">
+      <button class="dt-btn dt-btn--primary" type="button" id="dt-confirm">确定</button>
+      <button class="dt-btn" type="button" id="dt-reset">清空</button>
+    </div>
+  </section>
+
+  <!-- ================= 工具二：文档列表 ================= -->
+  <section class="dt-card">
+    <h3 class="dt-card-title">📚 文档列表</h3>
+
+    <div class="dt-list-head">
+      <input class="dt-input" type="text" id="dt-filter"
+             placeholder="输入关键字筛选…" autocomplete="off" spellcheck="false">
+      <span class="dt-count" id="dt-count"></span>
+    </div>
+
+    <div class="dt-list" id="dt-list">
+      <div class="dt-empty">加载中…</div>
+    </div>
+  </section>
+
 </div>
 
-<h2 id="归档" class="toc-header"> 归档</h2>
-<p>如果你想要搜索，请使用页面顶端的搜索框</p>
-<div id="pageTree">Loading pages ...</div>
+<style>
+.dt-root {
+  --dt-border: #d8dee4;
+  --dt-surface: #f6f8fa;
+  --dt-input-bg: #ffffff;
+  --dt-text: #1f2328;
+  --dt-muted: #656d76;
+  --dt-primary: #2563eb;
+  --dt-primary-text: #ffffff;
+  --dt-warn: #9a6700;
+  --dt-error: #cf222e;
+  margin: 1.75rem 0;
+  color: var(--dt-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+html.is-dark .dt-root,
+html.dark .dt-root,
+body.is-dark .dt-root,
+.theme--dark .dt-root {
+  --dt-border: #3d444d;
+  --dt-surface: #21262d;
+  --dt-input-bg: #0d1117;
+  --dt-text: #e6edf3;
+  --dt-muted: #8b949e;
+  --dt-primary: #4493f8;
+  --dt-warn: #d29922;
+  --dt-error: #f85149;
+}
+
+.dt-root * { box-sizing: border-box; }
+
+.dt-card {
+  border: 1px solid var(--dt-border);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  background: transparent;
+}
+
+.dt-card-title {
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.dt-field { margin-bottom: 0.9rem; }
+
+.dt-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.dt-input {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--dt-border);
+  border-radius: 6px;
+  background: var(--dt-input-bg);
+  color: var(--dt-text);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.dt-input:focus {
+  border-color: var(--dt-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .15);
+}
+.dt-input--error { border-color: var(--dt-error); }
+
+.dt-hint {
+  margin: 0.3rem 0 0;
+  min-height: 1em;
+  font-size: 0.8rem;
+  color: var(--dt-muted);
+}
+.dt-hint--warn { color: var(--dt-warn); }
+.dt-hint--error { color: var(--dt-error); }
+
+.dt-preview {
+  display: none;
+  margin: 0 0 0.8rem;
+  font-size: 0.82rem;
+  color: var(--dt-muted);
+}
+.dt-preview code {
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  background: var(--dt-surface);
+  font-size: 0.82rem;
+}
+
+.dt-note {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.8rem;
+  border-left: 3px solid var(--dt-primary);
+  border-radius: 4px;
+  background: var(--dt-surface);
+  font-size: 0.82rem;
+  color: var(--dt-muted);
+}
+.dt-note code {
+  padding: 0.05rem 0.3rem;
+  border-radius: 3px;
+  background: rgba(127, 127, 127, .15);
+}
+
+.dt-actions { display: flex; gap: 0.6rem; }
+
+.dt-btn {
+  padding: 0.45rem 1.1rem;
+  border: 1px solid var(--dt-border);
+  border-radius: 6px;
+  background: var(--dt-input-bg);
+  color: var(--dt-text);
+  font-size: 0.875rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all .15s;
+}
+.dt-btn:hover { border-color: var(--dt-primary); color: var(--dt-primary); }
+.dt-btn--primary {
+  background: var(--dt-primary);
+  border-color: var(--dt-primary);
+  color: var(--dt-primary-text);
+}
+.dt-btn--primary:hover { opacity: .88; color: var(--dt-primary-text); }
+
+.dt-list-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.dt-list-head .dt-input { flex: 1; }
+.dt-count {
+  font-size: 0.8rem;
+  color: var(--dt-muted);
+  white-space: nowrap;
+}
+
+.dt-list { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.dt-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--dt-border);
+  border-radius: 6px;
+  text-decoration: none !important;
+  color: var(--dt-text) !important;
+  transition: all .15s;
+}
+.dt-item:hover {
+  border-color: var(--dt-primary);
+  background: var(--dt-surface);
+  transform: translateX(2px);
+}
+.dt-item-title { flex: 1; font-weight: 500; }
+.dt-item-date {
+  font-size: 0.78rem;
+  color: var(--dt-muted);
+  white-space: nowrap;
+}
+
+.dt-empty {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--dt-muted);
+}
+</style>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ============================================================
+   *  配置区
+   * ============================================================ */
+  var DOC_DIR = 'document';          // 文档所在目录
+  var LOCALE  = 'zh';                // 站点语言
+
+  // 拼音库 CDN（unpkg 会自动解析到最新 3.x）
+  var PINYIN_CDN = 'https://unpkg.com/pinyin-pro@3/dist/index.js';
+
+  var m = window.location.pathname.match(/^\/([a-zA-Z]{2,}(?:-[a-zA-Z]+)?)\//);
+  if (m) LOCALE = m[1];
+
+  var EDIT_PREFIX = '/e/' + LOCALE + '/' + DOC_DIR + '/';   // 跳转编辑
+  var VIEW_PREFIX = '/' + LOCALE + '/' + DOC_DIR + '/';     // 查看页面
+
+  /* ============================================================
+   *  工具函数
+   * ============================================================ */
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+  function fmtDate(v) {
+    if (!v) return '';
+    var d = new Date(/^\d+$/.test(String(v)) ? Number(v) : v);
+    if (isNaN(d.getTime())) return '';
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  }
+
+  /* ---------- 动态加载脚本 ---------- */
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      if (document.querySelector('script[data-dt-src="' + src + '"]')) {
+        return resolve();
+      }
+      var s = document.createElement('script');
+      s.src = src;
+      s.async = true;
+      s.dataset.dtSrc = src;
+      s.onload = function () { resolve(); };
+      s.onerror = function () { reject(new Error('脚本加载失败: ' + src)); };
+      document.head.appendChild(s);
+    });
+  }
+
+  /* ---------- 获取当前登录用户 ---------- */
+  function fetchCurrentUser() {
+    var query = 'query { users { profile { id name email } } }';
+    return fetch('/_graphql', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify({ query: query })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (res) {
+      if (res.errors && res.errors.length) {
+        throw new Error(res.errors[0].message);
+      }
+      return res.data && res.data.users && res.data.users.profile;
+    });
+  }
+
+  /* ---------- 名字转 slug（中文转拼音，去掉非法字符） ---------- */
+  function nameToSlug(name) {
+    if (!name) return '';
+    var result = String(name);
+
+    // 含中文 → 用 pinyin-pro 转换（去声调 + 姓氏模式）
+    if (/[\u4e00-\u9fff]/.test(result) && window.pinyinPro) {
+      try {
+        result = window.pinyinPro.pinyin(result, {
+          toneType: 'none',
+          mode: 'surname'
+        });
+      } catch (e) {
+        // 转换失败，退回原文（后续正则会被过滤或保留汉字）
+      }
+    }
+
+    // 去掉所有空白，并只保留字母、数字、_、-（汉字也先去掉，避免出错）
+    result = result
+      .replace(/\s+/g, '')
+      .replace(/[^A-Za-z0-9_-]/g, '');
+
+    return result;
+  }
+
+  /* ============================================================
+   *  初始化
+   * ============================================================ */
+  function init(root) {
+
+    /* ------------------ 工具一：创建文章 ------------------ */
+    var titleEl   = root.querySelector('#dt-title');
+    var nameEl    = root.querySelector('#dt-name');
+    var titleHint = root.querySelector('#dt-title-hint');
+    var nameHint  = root.querySelector('#dt-name-hint');
+    var previewEl = root.querySelector('#dt-preview');
+    var confirmBtn = root.querySelector('#dt-confirm');
+    var resetBtn   = root.querySelector('#dt-reset');
+
+    var RE_VALID = /^[A-Za-z0-9_\u4e00-\u9fff-]+$/;
+    var RE_CN    = /[\u4e00-\u9fff]/;
+
+    function validate(input, hint) {
+      var v = input.value.trim();
+      var msg = '';
+      var level = '';
+
+      if (v) {
+        if (!RE_VALID.test(v)) {
+          msg = '只能包含字母、数字、汉字、- 和 _，不能有空格或其他符号';
+          level = 'error';
+        } else if (RE_CN.test(v)) {
+          msg = '检测到汉字，建议改用英文或数字（仍可继续）';
+          level = 'warn';
+        } else if (v.length > 60) {
+          msg = '内容过长，建议控制在 60 个字符以内';
+          level = 'warn';
+        }
+      }
+
+      hint.textContent = msg;
+      hint.className = 'dt-hint' + (level ? ' dt-hint--' + level : '');
+      input.classList.toggle('dt-input--error', level === 'error');
+      return level !== 'error';
+    }
+
+    function buildSlug() {
+      var t = titleEl.value.trim();
+      var n = nameEl.value.trim();
+      if (!t || !n) return '';
+      return t + '-' + n;
+    }
+
+    function updatePreview() {
+      var slug = buildSlug();
+      if (!slug) {
+        previewEl.style.display = 'none';
+        previewEl.innerHTML = '';
+        return;
+      }
+      previewEl.style.display = '';
+      previewEl.innerHTML = '将创建：<code>/' + escapeHtml(DOC_DIR + '/' + slug) + '</code>';
+    }
+
+    [titleEl, nameEl].forEach(function (el) {
+      el.addEventListener('input', function () {
+        validate(el, el === titleEl ? titleHint : nameHint);
+        updatePreview();
+      });
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') { e.preventDefault(); goCreate(); }
+      });
+    });
+
+    function goCreate() {
+      var okTitle = validate(titleEl, titleHint);
+      var okName  = validate(nameEl, nameHint);
+
+      if (!titleEl.value.trim()) {
+        titleHint.textContent = '请填写文章名';
+        titleHint.className = 'dt-hint dt-hint--error';
+        titleEl.classList.add('dt-input--error');
+        okTitle = false;
+      }
+      if (!nameEl.value.trim()) {
+        nameHint.textContent = '请填写你的名字 / 昵称';
+        nameHint.className = 'dt-hint dt-hint--error';
+        nameEl.classList.add('dt-input--error');
+        okName = false;
+      }
+      if (!okTitle || !okName) {
+        (!okTitle ? titleEl : nameEl).focus();
+        return;
+      }
+
+      var slug = buildSlug();
+      window.location.href = EDIT_PREFIX + encodeURIComponent(slug);
+    }
+
+    confirmBtn.addEventListener('click', goCreate);
+
+    resetBtn.addEventListener('click', function () {
+      titleEl.value = '';
+      nameEl.value  = '';
+      titleHint.textContent = '';
+      nameHint.textContent  = '';
+      titleHint.className = 'dt-hint';
+      nameHint.className  = 'dt-hint';
+      titleEl.classList.remove('dt-input--error');
+      nameEl.classList.remove('dt-input--error');
+      updatePreview();
+      titleEl.focus();
+    });
+
+    /* ---------- 自动获取当前用户名并填入 ---------- */
+    // 先显示一个占位提示，避免用户觉得突兀
+    nameHint.textContent = '正在获取当前用户…';
+    nameHint.className = 'dt-hint';
+
+    Promise.all([
+      loadScript(PINYIN_CDN).catch(function () { return null; }), // 拼音库失败不阻塞
+      fetchCurrentUser().catch(function () { return null; })
+    ]).then(function (results) {
+      var user = results[1];
+
+      // 用户已经手动输入了内容，就不要再覆盖
+      if (nameEl.value.trim()) {
+        nameHint.textContent = '';
+        nameHint.className = 'dt-hint';
+        return;
+      }
+
+      if (!user) {
+        nameHint.textContent = '未登录或获取用户失败，请手动填写';
+        nameHint.className = 'dt-hint dt-hint--warn';
+        return;
+      }
+
+      // 优先用 name，其次用 email 前缀
+      var rawName = user.name || (user.email ? user.email.split('@')[0] : '');
+      if (!rawName) {
+        nameHint.textContent = '未获取到用户名，请手动填写';
+        nameHint.className = 'dt-hint dt-hint--warn';
+        return;
+      }
+
+      var slugName = nameToSlug(rawName);
+
+      // 转换后为空（例如名字里全是符号），退回原始名字
+      if (!slugName) slugName = rawName.replace(/\s+/g, '');
+
+      nameEl.value = slugName;
+
+      var isCN = /[\u4e00-\u9fff]/.test(rawName);
+      nameHint.textContent = isCN
+        ? '已根据当前用户自动填入拼音：' + slugName
+        : '已根据当前用户自动填入：' + slugName;
+      nameHint.className = 'dt-hint';
+
+      updatePreview();
+    });
+
+    /* ------------------ 工具二：文档列表 ------------------ */
+    var listEl   = root.querySelector('#dt-list');
+    var filterEl = root.querySelector('#dt-filter');
+    var countEl  = root.querySelector('#dt-count');
+
+    var allDocs = [];
+
+    function renderList() {
+      var kw = (filterEl.value || '').trim().toLowerCase();
+      var items = allDocs.filter(function (p) {
+        if (!kw) return true;
+        return (p.title + ' ' + p.path).toLowerCase().indexOf(kw) !== -1;
+      });
+
+      countEl.textContent = items.length + ' / ' + allDocs.length;
+
+      if (!items.length) {
+        listEl.innerHTML = '<div class="dt-empty">' +
+          (allDocs.length ? '没有匹配的文章' : '暂无文章，快来创建第一篇吧！') +
+          '</div>';
+        return;
+      }
+
+      listEl.innerHTML = items.map(function (p) {
+        var url   = VIEW_PREFIX + p.path.split('/').map(encodeURIComponent).join('/');
+        var date  = fmtDate(p.updatedAt);
+        var title = p.title || p.path;
+        return '<a class="dt-item" href="' + escapeHtml(url) + '">' +
+                 '<span class="dt-item-title">' + escapeHtml(title) + '</span>' +
+                 (date ? '<span class="dt-item-date">' + escapeHtml(date) + '</span>' : '') +
+               '</a>';
+      }).join('');
+    }
+
+    filterEl.addEventListener('input', renderList);
+
+    function loadPages() {
+      var query = 'query { pages { list { id title path description updatedAt } } }';
+
+      fetch('/_graphql', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({ query: query })
+      })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (res) {
+        if (res.errors && res.errors.length) {
+          throw new Error(res.errors.map(function (e) { return e.message; }).join('；'));
+        }
+        var list = (res.data && res.data.pages && res.data.pages.list) || [];
+
+        allDocs = list.filter(function (p) {
+          return p.path === DOC_DIR || p.path.indexOf(DOC_DIR + '/') === 0;
+        });
+
+        allDocs.sort(function (a, b) {
+          return a.path.localeCompare(b.path);
+        });
+
+        renderList();
+      })
+      .catch(function (err) {
+        listEl.innerHTML = '<div class="dt-empty">' +
+          '加载失败：' + escapeHtml(err.message) +
+          '<br><span style="font-size:.8em;opacity:.7">若提示未登录，请先登录后再刷新本页。</span>' +
+          '</div>';
+      });
+    }
+
+    loadPages();
+  }
+
+  /* ============================================================
+   *  挂载
+   * ============================================================ */
+  var tries = 0;
+  var timer = setInterval(function () {
+    var root = document.getElementById('doc-toolkit');
+    if (root && !root.dataset.dtReady) {
+      root.dataset.dtReady = '1';
+      try {
+        init(root);
+      } catch (e) {
+        console.error('[doc-toolkit]', e);
+      }
+    }
+    if (++tries > 150) clearInterval(timer);
+  }, 200);
+
+  window.addEventListener('popstate', function () { tries = 0; });
+
+})();
+</script>
