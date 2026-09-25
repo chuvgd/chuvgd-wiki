@@ -2,7 +2,7 @@
 title: 第一节课
 description: 
 published: true
-date: 2026-09-25T18:27:33.388Z
+date: 2026-09-25T18:28:36.176Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-25T18:25:07.957Z
@@ -12,7 +12,7 @@ dateCreated: 2026-09-25T18:25:07.957Z
 
 # 第一节课讲什么
 
-## 每个技术组各自上
+## 每个技术组各自安排上课
 
 先上通识，再介绍技术组
 
