@@ -2,10 +2,10 @@
 title: git简易教程
 description: 
 published: true
-date: 2026-10-04T09:27:01.855Z
+date: 2026-10-03T17:30:54.575Z
 tags: git
 editor: markdown
-dateCreated: 2026-10-04T09:27:01.855Z
+dateCreated: 2026-10-03T16:52:49.048Z
 ---
 
 # git简易教程
@@ -375,4 +375,101 @@ git pull <远程仓库别名> <远程仓库分支>:<本地分支名>(相同可�
 ```
 
 **注意：git上远程仓库别名和github/gittee上远程仓库名不同——一个是别名，一个是github/gittee上创建仓库的仓库名称**
+
+
+
+## 十. git分支操作
+
+git分支操作：主要用于多人协作和管理项目对应的版本
+
+### 1. 查看当前分支
+
+```shell
+git branch
+```
+
+### 2. 创建分支
+
+```shell
+git branch <branch_name>
+```
+
+### 3. 切换分支
+
+```shell
+git checkout <branch_name>
+#注意：checkout命令会出现歧义，checkout不仅是切换分支，还能恢复文件，如果分支名字和文件名相同，会导致相关歧义
+git switch <branch_name>
+#更推荐的方式进行切换分支
+```
+
+### 4. 合并分支
+
+```shell
+git merge <branch_name>
+#将<branch_name>分支合并到当前工作的分支中
+```
+
+### 5. 删除分支
+
+```shell
+#删除已合并的分支
+git branch -d <branch_name>
+#删除未合并的分支
+git branch -D <branch_name>
+```
+
+最后，git提供了看提交记录的图形化方式，虽然没那么好看(
+
+```shell
+git log --oneline --graph --decorate --all
+#可以用alias简化
+alias graph="git log --oneline --graph --decorate --all"
+```
+
+
+
+
+
+## 十一. git分支合并冲突
+
+两个分支未修改同一个文件的同一处位置：git自动合并
+
+两个分支修改了同一个文件同一处位置，产生冲突
+
+发生合并冲突时，可以尝试以下相关方式：
+
+- 手动修改大法：
+  - step1：手动修改冲突文件，手动合并冲突内容
+  - step2：添加到暂存区和提交修改
+- 中止合并：当不想继续执行合并操作时就使用以下命令来终止
+
+```shell
+git merge --abort
+```
+
+
+
+## 十二. git rebase
+
+顾名思义：就是变基
+
+它会找到俩个分支的共同节点，然后将要变基的分支放到基的HEAD指针后面
+
+![](/home/ubuntu/图片/2026-10-04_00-50_1.png)
+
+很好的一张图片，就是这个意思
+
+```shell
+git switch dev
+git rebase main
+```
+
+切换到dev分支上然后找到dev和main分支上共同节点，然后将dev分支变基到main的HEAD指针上
+
+你要是问笔者merge和rebase对于分支操作的优缺，嗯......笔者不太清除，因为本人没做过大型项目的多人开发(，等后续慢慢体会吧
+
+最后的最后：附上一个算法组应该遵循的工作流——**github flow**
+
+![](/home/ubuntu/图片/2026-10-04_01-08.png)
 
