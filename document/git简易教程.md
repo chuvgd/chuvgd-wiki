@@ -1,3 +1,13 @@
+---
+title: git简易教程
+description: 
+published: true
+date: 2026-10-04T09:27:01.855Z
+tags: git
+editor: markdown
+dateCreated: 2026-10-04T09:27:01.855Z
+---
+
 # git简易教程
 
 git——分布式版本管理工具，分布式就是各自计算机上有相应的版本各自进行修改和操作，最后再进行版本确定和合并
