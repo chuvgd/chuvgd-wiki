@@ -2,7 +2,7 @@
 title: 培训策划书
 description: 
 published: true
-date: 2026-09-25T07:04:09.772Z
+date: 2026-10-04T07:17:59.614Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-25T07:04:09.772Z
