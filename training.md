@@ -2,7 +2,7 @@
 title: 培训
 description: 
 published: true
-date: 2026-10-06T16:32:17.426Z
+date: 2026-10-06T16:56:54.987Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-07T09:17:14.487Z
@@ -66,4 +66,6 @@ gantt
 
 我们正在尝试做更好的培训体系。有很多队伍都开源了自己的培训资料，也可以多看看。
 
-[pnx战队文档](https://hkustgz-robomaster-pnx.github.io/training/ )
+- [PNX 培训知识库](https://hkustgz-robomaster-pnx.github.io/training/ )
+- [【RM2027-电控培训资料开源】中国科学技术大学 RoboWalker战队](https://bbs.robomaster.com/article/18267 )
+- []()
