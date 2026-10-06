@@ -2,7 +2,7 @@
 title: 第七届“敢热爱，你就来”机甲大师校内赛 机器人制作规范
 description: 
 published: true
-date: 2026-10-06T17:44:12.827Z
+date: 2026-10-06T17:44:35.938Z
 tags: 
 editor: markdown
 dateCreated: 2026-10-06T17:44:12.827Z
@@ -13,8 +13,6 @@ dateCreated: 2026-10-06T17:44:12.827Z
 > 编写：赛事组委会 | 版本：V1.0 | 2026 年 10 月
 
 ## 目录
-
-[TOC]
 
 - 一、能源
 - 二、无线通讯设备
