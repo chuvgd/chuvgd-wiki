@@ -2,7 +2,7 @@
 title: 控制
 description: 
 published: true
-date: 2026-10-06T16:52:19.889Z
+date: 2026-10-06T16:52:40.907Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -24,4 +24,6 @@ dateCreated: 2026-09-19T07:31:40.936Z
 
 ## 课件资源
 
+<!--
 [VGD2027秋机械培训](https://wwaqn.lanzouc.com/b00tcu8tsd)
+-->
