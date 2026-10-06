@@ -2,7 +2,7 @@
 title: 技术文档
 description: 
 published: true
-date: 2026-09-25T08:18:43.144Z
+date: 2026-10-06T17:02:32.487Z
 tags: 
 editor: code
 dateCreated: 2026-09-20T14:08:08.124Z
@@ -29,3 +29,399 @@ dateCreated: 2026-09-20T14:08:08.124Z
 <p>如果你想要搜索，请使用页面顶端的搜索框</p>
 
 <div id="dt-list" class="dt-list">加载中…</div>
+
+
+
+<!-- 下面是页面中使用的 dt-list 和 dt-from 工具的 js 和 css，因为 wiki.js 不会保存这部分代码，所以 backup 在这里，使用时放到 `页面-脚本` 和 `页面-样式` 中 -->
+
+<!--------------------------------------------------------------------------------------------------------------------------------
+<style>
+.dt-form {
+  margin: 1rem 0;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(127,127,127,.25);
+  border-radius: 8px
+}
+.dt-form label {
+  display: block;
+  margin: .75rem 0 .35rem;
+  font-size: .85rem;
+  font-weight: 600
+}
+.dt-form label:first-child {
+  margin-top: 0
+}
+.dt-form input {
+  width: 100%;
+  padding: .55rem .8rem;
+  box-sizing: border-box;
+  border: 1px solid rgba(127,127,127,.35);
+  border-radius: 6px;
+  background: 0 0;
+  color: inherit;
+  font: inherit;
+  font-size: .9rem
+}
+.dt-form input:focus {
+  outline: 0;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79,70,229,.12)
+}
+.dt-form input.is-error {
+  border-color: #dc2626
+}
+.dt-form .dt-hint {
+  margin: .3rem 0 0;
+  min-height: 1em;
+  font-size: .76rem;
+  opacity: .65
+}
+.dt-form .dt-hint.is-warn {
+  color: #c2410c;
+  opacity: 1
+}
+.dt-form .dt-hint.is-error {
+  color: #dc2626;
+  opacity: 1
+}
+.dt-form .dt-preview {
+  display: none;
+  margin: .9rem 0 0;
+  font-size: .82rem;
+  opacity: .75
+}
+.dt-form .dt-preview code {
+  padding: .1rem .4rem;
+  border-radius: 4px;
+  background: rgba(79,70,229,.1);
+  color: #4f46e5
+}
+.dt-form .dt-actions {
+  display: flex;
+  gap: .5rem;
+  margin-top: 1rem
+}
+.dt-form button {
+  padding: .5rem 1.2rem;
+  border: 1px solid rgba(127,127,127,.35);
+  border-radius: 6px;
+  background: 0 0;
+  color: inherit;
+  font: inherit;
+  font-size: .85rem;
+  cursor: pointer
+}
+.dt-form button[data-role=confirm] {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #fff
+}
+.dt-form button[data-role=confirm]:hover {
+  background: #4338ca
+}
+.dt-list {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  margin: 1rem 0
+}
+.dt-list .dt-item {
+  display: block;
+  padding: .7rem .95rem;
+  border: 1px solid rgba(127,127,127,.25);
+  border-radius: 8px;
+  text-decoration: none!important;
+  color: inherit!important
+}
+.dt-list .dt-item:hover {
+  border-color: #4f46e5
+}
+.dt-list .dt-item-head {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  min-width: 0
+}
+.dt-list .dt-item-title {
+  font-weight: 500;
+  flex-shrink: 0;
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.dt-list .dt-item-tags {
+  display: flex;
+  gap: .3rem;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden
+}
+.dt-list .dt-tag {
+  padding: .1rem .55rem;
+  border-radius: 999px;
+  flex-shrink: 0;
+  background: rgba(79,70,229,.1);
+  color: #4f46e5;
+  font-size: .7rem;
+  font-weight: 500;
+  white-space: nowrap
+}
+.dt-list .dt-item-date {
+  font-size: .74rem;
+  opacity: .6;
+  white-space: nowrap;
+  margin-left: auto
+}
+.dt-list .dt-empty {
+  padding: 2rem 1rem;
+  text-align: center;
+  opacity: .6;
+  font-size: .85rem
+}
+</style>
+-------------------------------------------------------------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------------------------------------------------------------
+<script>
+(function () {
+  'use strict';
+
+  var m = location.pathname.match(/^\/(?:e\/)?([a-zA-Z-]+)\//);
+  var LOCALE = m ? m[1] : 'zh';
+  var DIR = 'document';
+  var VIEW = '/' + LOCALE + '/';
+  var EDIT = '/e/' + LOCALE + '/';
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function fmtDate(v) {
+    var d = new Date(v);
+    if (isNaN(d)) return '';
+    return d.getFullYear() + '-' +
+      String(d.getMonth() + 1).padStart(2, '0') + '-' +
+      String(d.getDate()).padStart(2, '0');
+  }
+
+  function toSlug(name) {
+    var r = String(name);
+    if (/[\u4e00-\u9fff]/.test(r) && window.pinyinPro) {
+      try { r = pinyinPro.pinyin(r, { toneType: 'none', mode: 'surname' }); } catch (e) {}
+    }
+    return r.replace(/\s+/g, '').replace(/[^A-Za-z0-9_-]/g, '');
+  }
+
+  function getCurrentPath() {
+    var p = location.pathname.replace(/^\/e\//, '/').replace(/^\/[a-zA-Z-]+\//, '');
+    try { p = decodeURIComponent(p); } catch (e) {}
+    return p.replace(/\/+$/, '');
+  }
+
+  /* ---------------- 表单 ---------------- */
+  function initForm() {
+    var form = document.querySelector('.dt-form');
+    if (!form || form.dataset.ready) return;
+    form.dataset.ready = '1';
+
+    form.innerHTML =
+      '<label>文章名</label>' +
+      '<input id="dt-title" type="text" placeholder="例如：Docker 部署笔记" autocomplete="off">' +
+      '<p class="dt-hint" id="dt-title-hint"></p>' +
+      '<label>署名</label>' +
+      '<input id="dt-name" type="text" placeholder="你的名字或昵称" autocomplete="off">' +
+      '<p class="dt-hint" id="dt-name-hint"></p>' +
+      '<p class="dt-preview" id="dt-preview"></p>' +
+      '<div class="dt-actions">' +
+        '<button type="button" data-role="confirm">创建</button>' +
+        '<button type="button" data-role="reset">清空</button>' +
+      '</div>';
+
+    var titleEl = form.querySelector('#dt-title');
+    var nameEl = form.querySelector('#dt-name');
+    var titleHint = form.querySelector('#dt-title-hint');
+    var nameHint = form.querySelector('#dt-name-hint');
+    var preview = form.querySelector('#dt-preview');
+    var slug = '';
+
+    function check(input, hint) {
+      var v = input.value.trim();
+      var msg = '', cls = 'dt-hint';
+      if (v) {
+        if (!/^[A-Za-z0-9_\u4e00-\u9fff-]+$/.test(v)) {
+          msg = '只能包含字母、数字、汉字、- 和 _'; cls += ' is-error';
+        } else if (/[\u4e00-\u9fff]/.test(v)) {
+          msg = '建议改用英文或数字（仍可继续）'; cls += ' is-warn';
+        }
+      }
+      hint.textContent = msg;
+      hint.className = cls;
+      input.classList.toggle('is-error', cls.indexOf('is-error') > -1);
+      return cls.indexOf('is-error') === -1;
+    }
+
+    function updatePreview() {
+      var t = titleEl.value.trim(), n = nameEl.value.trim();
+      slug = (t && n) ? t + '-' + n : '';
+      if (!slug) { preview.style.display = 'none'; return; }
+      preview.style.display = '';
+      preview.innerHTML = '将创建：<code>/' + esc(DIR + '/' + slug) + '</code>';
+    }
+
+    function submit() {
+      var okT = check(titleEl, titleHint);
+      var okN = check(nameEl, nameHint);
+      if (!titleEl.value.trim()) {
+        titleHint.textContent = '请填写文章名'; titleHint.className = 'dt-hint is-error';
+        titleEl.classList.add('is-error'); okT = false;
+      }
+      if (!nameEl.value.trim()) {
+        nameHint.textContent = '请填写你的署名'; nameHint.className = 'dt-hint is-error';
+        nameEl.classList.add('is-error'); okN = false;
+      }
+      if (!okT || !okN) return;
+      var full = DIR + '/' + slug;
+      location.href = EDIT + full.split('/').map(encodeURIComponent).join('/');
+    }
+
+    [titleEl, nameEl].forEach(function (el) {
+      el.addEventListener('input', function () {
+        check(el, el === titleEl ? titleHint : nameHint);
+        updatePreview();
+      });
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') { e.preventDefault(); submit(); }
+      });
+    });
+
+    form.querySelector('[data-role="confirm"]').addEventListener('click', submit);
+    form.querySelector('[data-role="reset"]').addEventListener('click', function () {
+      titleEl.value = nameEl.value = '';
+      titleHint.textContent = nameHint.textContent = '';
+      titleHint.className = nameHint.className = 'dt-hint';
+      titleEl.classList.remove('is-error');
+      nameEl.classList.remove('is-error');
+      updatePreview();
+      titleEl.focus();
+    });
+
+    /* ============ 核心修复：轮询等待 WIKI.$store 可用 ============ */
+    nameHint.textContent = '正在获取当前用户…';
+
+    var userTries = 0;
+    var userTimer = setInterval(function () {
+      var name = null;
+      try {
+        if (window.WIKI && WIKI.$store && typeof WIKI.$store.get === 'function') {
+          name = WIKI.$store.get('user/name');
+        }
+      } catch (e) {}
+
+      if (name) {
+        clearInterval(userTimer);
+        // 同时加载拼音库（如果还没加载）
+        if (!window.pinyinPro) {
+          var s = document.createElement('script');
+          s.src = 'https://unpkg.com/pinyin-pro@3/dist/index.js';
+          s.onload = function () { fillName(name); };
+          s.onerror = function () {
+            nameHint.textContent = '拼音库加载失败，请手动填写';
+            nameHint.className = 'dt-hint is-warn';
+          };
+          document.head.appendChild(s);
+        } else {
+          fillName(name);
+        }
+        return;
+      }
+
+      // 超过 10 秒仍未就绪，放弃
+      if (++userTries > 100) {
+        clearInterval(userTimer);
+        nameHint.textContent = '未登录，请手动填写';
+        nameHint.className = 'dt-hint is-warn';
+      }
+    }, 100);
+
+    function fillName(rawName) {
+      var slugName = toSlug(rawName);
+      if (!slugName) { nameHint.textContent = '请手动填写'; return; }
+      nameEl.value = slugName;
+      nameHint.textContent = '已自动填入：' + slugName;
+      nameHint.className = 'dt-hint';
+      updatePreview();
+    }
+  }
+
+  /* ---------------- 列表 ---------------- */
+  function initList() {
+    var listEl = document.querySelector('#dt-list');
+    if (!listEl || listEl.dataset.ready) return;
+    listEl.dataset.ready = '1';
+
+    var currentPath = getCurrentPath();
+
+    fetch('/graphql', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify({ query: '{ pages { list { title path updatedAt tags } } }' })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (res) {
+      var list = (res.data && res.data.pages && res.data.pages.list) || [];
+      list = list.filter(function (p) {
+        return p.path !== currentPath && (p.path === DIR || p.path.indexOf(DIR + '/') === 0);
+      }).sort(function (a, b) { return a.path.localeCompare(b.path); });
+
+      if (!list.length) {
+        listEl.innerHTML = '<div class="dt-empty">暂无文章</div>';
+        return;
+      }
+
+      listEl.innerHTML = list.map(function (p) {
+        var url = VIEW + p.path.split('/').map(encodeURIComponent).join('/');
+        var date = fmtDate(p.updatedAt);
+        var tags = (p.tags || []).map(function (t) {
+          return '<span class="dt-tag">' + esc(t) + '</span>';
+        }).join('');
+        return '<a class="dt-item" href="' + esc(url) + '">' +
+                 '<div class="dt-item-head">' +
+                   '<span class="dt-item-title">' + esc(p.title || p.path) + '</span>' +
+                   (tags ? '<span class="dt-item-tags">' + tags + '</span>' : '') +
+                   (date ? '<span class="dt-item-date">' + esc(date) + '</span>' : '') +
+                 '</div>' +
+               '</a>';
+      }).join('');
+    })
+    .catch(function (err) {
+      listEl.innerHTML = '<div class="dt-empty">加载失败：' + esc(err.message) + '</div>';
+    });
+  }
+
+  /* ---------------- 挂载 ---------------- */
+  function mount() {
+    initForm();
+    initList();
+  }
+
+  mount();
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mount);
+  }
+
+  var tries = 0;
+  var timer = setInterval(function () {
+    mount();
+    var formOk = document.querySelector('.dt-form[data-ready]');
+    var listOk = document.querySelector('#dt-list[data-ready]');
+    if ((formOk && listOk) || ++tries > 30) clearInterval(timer);
+  }, 100);
+
+})();
+</script>
+-------------------------------------------------------------------------------------------------------------------------------->
