@@ -2,7 +2,7 @@
 title: 机械
 description: 
 published: true
-date: 2026-10-06T16:39:55.816Z
+date: 2026-10-06T16:41:11.879Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:02:09.494Z
@@ -10,7 +10,7 @@ dateCreated: 2026-09-18T18:02:09.494Z
 
 # 机械培训内容
 
-## 课程表
+## 进度表
 
 | 时间 | 内容 |
 | --- | --- |
