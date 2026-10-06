@@ -2,7 +2,7 @@
 title: 机械
 description: 
 published: true
-date: 2026-10-06T16:41:11.879Z
+date: 2026-10-06T16:58:13.413Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:02:09.494Z
@@ -24,7 +24,32 @@ dateCreated: 2026-09-18T18:02:09.494Z
 
 [VGD2027秋机械培训](https://wwaqn.lanzouc.com/b00tcu8tsd)
 
-<!--
+## 其他资源
+
+- [一招教你搞定未安装SOLIDWORKS Login Manager问题](https://www.bilibili.com/video/BV1wPPSzBEg6 )
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-------------------------------------------------------------------
+
 > 一下内容由 吴锦泽 编写，具体内容可以参考或修改
 > 这个页面是 机械组培训内容 的导航页，可以参考 [通识培训](/training/common) 的编写方式
 
