@@ -1,8 +1,8 @@
 ---
 title: 沟通
 description: 
-published: false
-date: 2026-10-06T17:05:45.560Z
+published: true
+date: 2026-10-06T17:08:42.274Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-15T11:47:33.405Z
