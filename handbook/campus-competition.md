@@ -2,7 +2,7 @@
 title: 第七届“敢热爱，你就来”机甲大师校内赛 机器人制作规范
 description: 
 published: true
-date: 2026-10-06T17:44:35.938Z
+date: 2026-10-07T05:41:59.588Z
 tags: 
 editor: markdown
 dateCreated: 2026-10-06T17:44:12.827Z
