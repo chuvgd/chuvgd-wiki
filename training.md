@@ -2,7 +2,7 @@
 title: 培训
 description: 
 published: true
-date: 2026-10-07T05:56:36.385Z
+date: 2026-10-07T06:02:13.858Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-07T09:17:14.487Z
@@ -57,11 +57,3 @@ gantt
     校内赛: 2026-11-01, 30d
     考核: 2026-12-1, 7d
 ```
-
-## Reference
-
-我们正在尝试做更好的培训体系。有很多队伍都开源了自己的培训资料，也可以多看看。
-
-- [PNX 培训知识库](https://hkustgz-robomaster-pnx.github.io/training/ )
-- [【RM2027-电控培训资料开源】中国科学技术大学 RoboWalker战队](https://bbs.robomaster.com/article/18267 )
-- []()
