@@ -2,7 +2,7 @@
 title: 控制
 description: 
 published: true
-date: 2026-10-07T06:02:38.639Z
+date: 2026-10-07T06:03:05.439Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -31,6 +31,6 @@ dateCreated: 2026-09-19T07:31:40.936Z
 
 ## Reference
 
+- [PNX 培训知识库](https://hkustgz-robomaster-pnx.github.io/training/ )
 - [【RM2027-电控培训资料开源】中国科学技术大学 RoboWalker战队](https://bbs.robomaster.com/article/18267 )
 - []()
-
