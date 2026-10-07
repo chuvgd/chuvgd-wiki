@@ -1,8 +1,8 @@
 ---
 title: blocked
 description: 
-published: true
-date: 2026-10-07T06:10:08.735Z
+published: false
+date: 2026-10-07T06:11:37.386Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:06:53.813Z
