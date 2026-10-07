@@ -1,14 +1,14 @@
 ---
-title: 基础通识
+title: 通识
 description: 
 published: true
-date: 2026-10-07T06:04:58.230Z
+date: 2026-10-07T06:05:25.938Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:20:09.990Z
 ---
 
-# 基础通识
+# 通识
 
 1. [RM 是什么比赛](/training/common/robomaster)
 2. [我们是什么一个队伍](/training/common/vgd)
