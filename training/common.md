@@ -2,7 +2,7 @@
 title: 基础通识
 description: 
 published: true
-date: 2026-10-06T17:34:27.359Z
+date: 2026-10-07T06:04:58.230Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:20:09.990Z
@@ -23,7 +23,7 @@ dateCreated: 2026-09-18T18:20:09.990Z
 
 一些常用的跨领域知识如下：
 
-1. 线材、布线
+1. [线材【PNX】](https://hkustgz-robomaster-pnx.github.io/training/?doc=AewidsFxjoS6PPx9b33cQoDCnwf)、[布线（PNX）](https://hkustgz-robomaster-pnx.github.io/training/?doc=GQ79dTUmoor4w7xtyk0cbQMTnRd)
 2. 机械基本材料
 3. 了解控制知识
 4. USB和CAN：通信是怎么回事
