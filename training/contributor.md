@@ -2,11 +2,13 @@
 title: 贡献者记录
 description: 
 published: true
-date: 2026-09-20T11:43:24.894Z
+date: 2026-10-07T06:09:47.463Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:06:53.813Z
 ---
+
+<!--
 
 ### 吴锦泽
 
@@ -26,3 +28,5 @@ feat(training): 进行了培训方案的简单设计
 ### 还有你！快来加入我们的文档编辑大队吧！
 
 联系 serialist@chuvgd.cn
+
+-->
