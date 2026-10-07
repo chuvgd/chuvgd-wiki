@@ -2,7 +2,7 @@
 title: 控制
 description: 
 published: true
-date: 2026-10-06T17:28:15.965Z
+date: 2026-10-07T06:02:38.639Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -28,3 +28,9 @@ dateCreated: 2026-09-19T07:31:40.936Z
 <!--
 [VGD2027秋机械培训](https://wwaqn.lanzouc.com/b00tcu8tsd)
 -->
+
+## Reference
+
+- [【RM2027-电控培训资料开源】中国科学技术大学 RoboWalker战队](https://bbs.robomaster.com/article/18267 )
+- []()
+
