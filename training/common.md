@@ -2,7 +2,7 @@
 title: 通识
 description: 
 published: true
-date: 2026-10-07T06:05:25.938Z
+date: 2026-10-07T06:05:30.998Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:20:09.990Z
@@ -17,7 +17,7 @@ dateCreated: 2026-09-18T18:20:09.990Z
 5. [物资和设备使用常识](/training/common/tools)
 6. [如何自学/提问/检索信息](/training/common/howtodo)
 
-## 其他技术通识
+## 其他
 
 除了这些东西外，你应该也了解一些其他技术知识，例如机械组也应当知道关于布线和线材的知识，电控也应该知道螺丝的型号。
 
