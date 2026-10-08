@@ -2,7 +2,7 @@
 title: 电控
 description: 
 published: true
-date: 2026-10-08T05:16:05.566Z
+date: 2026-10-08T15:16:24.924Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -14,11 +14,11 @@ dateCreated: 2026-09-19T07:31:40.936Z
 
 | 时间       | 内容                                         |
 | ---------- | -------------------------------------------- |
-|            | [第0讲 通识](/training/common)               |
-| 10.10 周六 | [第1讲 C 语言](/training/prog/c-1)           |
+|            | 第0讲 通识               |
+| 10.10 周六 | 第1讲 C 语言          |
 | 10.11 周日 | 第2讲 认识硬件                               |
 | 10.17 周六 | 第3讲 嵌入式和STM32，GPIO和TIM，点亮第一盏灯 |
-| 10.18 周日 | 第4讲 串口通信和中断，蓝牙连接手机           |
+| 10.18 周日 | 第4讲 串口通信和中断           |
 | 10.24 周六 | 第5讲 CAN通信，驱动电机                      |
 | 10.25 周日 | 第6讲 PID和控制：转动电机                    |
 | ？         | 第7讲 麦克纳轮底盘解算，姿态解算             |
@@ -31,7 +31,12 @@ dateCreated: 2026-09-19T07:31:40.936Z
 ## 资源
 
 <div id="geo-cards">
-  <a href="/training/prog/c-1" target="_self" data-title="第1讲 C 语言" data-desc=""></a>
+  <a href="/training/common" target="_self" data-title="第0讲 通识" data-desc=""></a>
+  <a href="https://meeting.tencent.com/cw/29ajXbBac9" target="_self" data-title="第0讲 通识-录播1" data-desc=""></a>
+  <a href="https://meeting.tencent.com/cw/2ZqmYqn539" target="_self" data-title="第0讲 通识-录播1" data-desc=""></a>
+   <hr>
+   <a href="/training/prog/c-1" target="_self" data-title="第1讲 C 语言" data-desc=""></a>
+  
 </div>
 
 <!--
