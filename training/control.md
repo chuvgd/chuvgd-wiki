@@ -2,7 +2,7 @@
 title: 电控
 description: 
 published: true
-date: 2026-10-08T15:42:15.593Z
+date: 2026-10-08T15:57:30.564Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -13,7 +13,7 @@ dateCreated: 2026-09-19T07:31:40.936Z
 学习内容：
 1. C/C++
 2. 嵌入式（主要为STM32）
-3. 控制原理
+3. 部分控制原理
 4. 一点点机器人运动学/运动学知识
 5. 一点点数学（例如一点复变和线代）
 6. Git
