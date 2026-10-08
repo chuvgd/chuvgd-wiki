@@ -1,14 +1,14 @@
 ---
-title: 第一节课
+title: blocked
 description: 
-published: true
-date: 2026-09-25T18:28:36.176Z
+published: false
+date: 2026-10-08T04:40:21.359Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-25T18:25:07.957Z
 ---
 
-
+<!--
 
 # 第一节课讲什么
 
@@ -152,3 +152,5 @@ RoboMaster机甲大师赛是由大疆DJI发起的全国性大学生顶级机器�
 2.   入门必备知识、工具、软件、设备介绍
 3.   学习路径、阶段任务、考核要求
 4.   往期工作内容、备赛案例、常见问题
+
+-->
