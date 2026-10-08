@@ -2,7 +2,7 @@
 title: 电控
 description: 
 published: true
-date: 2026-10-08T15:57:30.564Z
+date: 2026-10-08T15:58:21.862Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -40,7 +40,7 @@ dateCreated: 2026-09-19T07:31:40.936Z
 ## 资源
 
 <div id="geo-cards">
-  <a href="/training/common" target="_self" data-title="第0讲 通识" data-desc=""></a>
+  <a href="https://wiki.chuvgd.cn/training/common" target="_self" data-title="第0讲 通识" data-desc=""></a>
   <a href="https://meeting.tencent.com/cw/29ajXbBac9" target="_self" data-title="第0讲 通识-录播1" data-desc=""></a>
   <a href="https://meeting.tencent.com/cw/2ZqmYqn539" target="_self" data-title="第0讲 通识-录播2" data-desc=""></a>
    <hr>
