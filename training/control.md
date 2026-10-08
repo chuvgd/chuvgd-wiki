@@ -1,8 +1,8 @@
 ---
-title: 控制
+title: 电控
 description: 
 published: true
-date: 2026-10-08T05:10:30.897Z
+date: 2026-10-08T05:16:05.566Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -28,7 +28,11 @@ dateCreated: 2026-09-19T07:31:40.936Z
 | -          | 第5.1讲 通信                                             |
 -->
 
-## 课件资源
+## 资源
+
+<div id="geo-cards">
+  <a href="/training/prog/c-1" target="_self" data-title="第1讲 C 语言" data-desc=""></a>
+</div>
 
 <!--
 [VGD2027秋机械培训](https://wwaqn.lanzouc.com/b00tcu8tsd)
