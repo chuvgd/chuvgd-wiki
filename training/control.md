@@ -2,7 +2,7 @@
 title: 电控
 description: 
 published: true
-date: 2026-10-08T15:16:24.924Z
+date: 2026-10-08T15:29:27.919Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -33,7 +33,7 @@ dateCreated: 2026-09-19T07:31:40.936Z
 <div id="geo-cards">
   <a href="/training/common" target="_self" data-title="第0讲 通识" data-desc=""></a>
   <a href="https://meeting.tencent.com/cw/29ajXbBac9" target="_self" data-title="第0讲 通识-录播1" data-desc=""></a>
-  <a href="https://meeting.tencent.com/cw/2ZqmYqn539" target="_self" data-title="第0讲 通识-录播1" data-desc=""></a>
+  <a href="https://meeting.tencent.com/cw/2ZqmYqn539" target="_self" data-title="第0讲 通识-录播2" data-desc=""></a>
    <hr>
    <a href="/training/prog/c-1" target="_self" data-title="第1讲 C 语言" data-desc=""></a>
   
