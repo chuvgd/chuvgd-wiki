@@ -2,7 +2,7 @@
 title: 培训
 description: 
 published: true
-date: 2026-10-11T15:12:28.691Z
+date: 2026-10-11T15:12:49.839Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-07T09:17:14.487Z
@@ -22,11 +22,11 @@ dateCreated: 2026-09-07T09:17:14.487Z
 
 <div class="geo-cards">
   <a href="/training/mech">机械</a>
-  <a href="/training/control" target="_self">电控</a>
-  <a href="/training/elec" target="_self">硬件</a>
-  <a href="/training/algo" target="_self">算法</a>
-  <a href="/training/software" target="_self">软件</a>
-  <a href="/training" target="_self">宣运</a>
+  <a href="/training/control">电控</a>
+  <a href="/training/elec">硬件</a>
+  <a href="/training/algo">算法</a>
+  <a href="/training/software">软件</a>
+  <a href="/training">宣运</a>
 </div>
 
 ## 技术概览
