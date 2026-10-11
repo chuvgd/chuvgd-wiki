@@ -2,7 +2,7 @@
 title: 电控
 description: 
 published: true
-date: 2026-10-10T15:43:43.695Z
+date: 2026-10-11T10:20:19.417Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -47,12 +47,8 @@ dateCreated: 2026-09-19T07:31:40.936Z
   <hr>
   第1讲
   <a href="/training/prog/c-1" target="_self" data-title="文档" data-desc=""></a>
-  
+  <a href="https://serialist.lanzoup.com/b00tcunnod" target="_self" data-title="课件和示例代码" data-desc=""></a>
 </div>
-
-<!--
-[VGD2027秋机械培训](https://wwaqn.lanzouc.com/b00tcu8tsd)
--->
 
 ## 其他链接
 
