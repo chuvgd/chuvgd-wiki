@@ -2,7 +2,7 @@
 title: 电控
 description: 
 published: true
-date: 2026-10-12T04:40:15.932Z
+date: 2026-10-12T12:25:57.471Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -58,8 +58,10 @@ dateCreated: 2026-09-19T07:31:40.936Z
 
 ## 其他链接
 
-- [走进VGD技术组之——电控组](https://mp.weixin.qq.com/s/8ED1V7RiuFMMugrdT1wPHQ)
-- [PNX 培训知识库](https://hkustgz-robomaster-pnx.github.io/training/ )
-- [【RM2027-电控培训资料开源】中国科学技术大学 RoboWalker战队](https://bbs.robomaster.com/article/18267 )
-- [苍穹战队Robomaster电控组培训](https://xiaofxx.github.io/rm-ec-training/)
-- [机器人工程师学习计划](https://zhuanlan.zhihu.com/p/22266788)
+<div class="geo-cards">
+  <a href="https://mp.weixin.qq.com/s/8ED1V7RiuFMMugrdT1wPHQ">走进VGD技术组之——电控组</a>
+  <a href="https://hkustgz-robomaster-pnx.github.io/training/">PNX 培训知识库</a>
+  <a href="https://bbs.robomaster.com/article/18267">【RM2027-电控培训资料开源】中国科学技术大学 RoboWalker战队</a>
+  <a href="https://xiaofxx.github.io/rm-ec-training/">苍穹战队Robomaster电控组培训</a>
+  <a href="https://zhuanlan.zhihu.com/p/22266788">机器人工程师学习计划</a>
+</div>
