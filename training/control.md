@@ -2,7 +2,7 @@
 title: 电控
 description: 
 published: true
-date: 2026-10-11T10:23:32.639Z
+date: 2026-10-12T04:40:15.932Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -39,17 +39,21 @@ dateCreated: 2026-09-19T07:31:40.936Z
 
 ## 资源
 
-<div id="geo-cards">
-  第0讲
-  <a href="/training/common" target="_self" data-title="文档" data-desc=""></a>
-  <a href="https://meeting.tencent.com/cw/29ajXbBac9" target="_self" data-title="录播1" data-desc=""></a>
-  <a href="https://meeting.tencent.com/cw/2ZqmYqn539" target="_self" data-title="录播2" data-desc=""></a>
-  <hr>
-  第1讲
-  <a href="/training/prog/c-1" target="_self" data-title="文档" data-desc=""></a>
-  <a href="https://serialist.lanzoup.com/b00tcunnod" target="_self" data-title="课件和示例代码" data-desc=""></a>
-  <a href="https://meeting.tencent.com/crm/l6GJ6neGe4" target="_self" data-title="录播1" data-desc=""></a>
-  <a href="https://meeting.tencent.com/crm/2ZvyZqjzfa" target="_self" data-title="录播2" data-desc=""></a>
+### 第0讲
+
+<div class="geo-cards">
+  <a href="/training/common">文档</a>
+  <a href="https://meeting.tencent.com/cw/29ajXbBac9">录播1</a>
+  <a href="https://meeting.tencent.com/cw/2ZqmYqn539">录播2</a>
+</div>
+
+### 第1讲
+
+<div class="geo-cards">
+  <a href="/training/prog/c-1">文档</a>
+  <a href="https://serialist.lanzoup.com/b00tcunnod">课件和示例代码</a>
+  <a href="https://meeting.tencent.com/crm/l6GJ6neGe4">录播1</a>
+  <a href="https://meeting.tencent.com/crm/2ZvyZqjzfa">录播2</a>
 </div>
 
 ## 其他链接
