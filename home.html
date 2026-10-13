@@ -2,7 +2,7 @@
 title: 首页
 description: 
 published: true
-date: 2026-10-12T13:50:30.971Z
+date: 2026-10-13T12:42:47.019Z
 tags: 
 editor: code
 dateCreated: 2026-09-02T13:16:34.475Z
@@ -24,20 +24,6 @@ dateCreated: 2026-09-02T13:16:34.475Z
   <a href="https://www.robomaster.com/" desc="汇聚全球青年工程师">RoboMaster 赛事官网</a>
 </div>
 
-<!--
-</brief：这里是一个example！>
-
-<div id="geo-cards">
-  <a href="https://www.chuvgd.cn/"
-     data-title="长安大学 VGD 机器人队官网"
-     data-desc="穷且益坚，不坠青云志"></a>
-
-  <a href="https://www.robomaster.com/"
-     data-title="RoboMaster 赛事官网"
-     data-desc="汇聚全球青年工程师"></a>
-</div>
--->
-
 <!-- 下面是页面中使用的 geo-cards 工具的 js 和 css，因为 wiki.js 不会保存这部分代码，所以 backup 在这里，使用时放到 `页面-脚本` 和 `页面-样式` 中 -->
 
 <!--------------------------------------------------------------------------------------------------------------------------------
@@ -56,25 +42,25 @@ dateCreated: 2026-09-02T13:16:34.475Z
     });
   }
 
-  function renderCard(a) {
+  function render(a) {
     if (a.dataset.geoReady) return;
     a.dataset.geoReady = '1';
 
-    var href = a.getAttribute('href') || '';
-    var title = a.dataset.title || href;
-    var desc = a.dataset.desc || '';
+    var href  = a.getAttribute('href') || '';
+    var title = a.textContent.trim();
+    var desc  = a.getAttribute('desc') || '';
+    var icon  = a.getAttribute('icon') || '';
+    var host  = '';
 
-    var host = href;
-    try { host = new URL(href).host; } catch (e) {}
-
-    var icon = a.dataset.icon;
-    if (!icon) {
-      try { icon = new URL(href).origin + '/favicon.ico'; } catch (e) { icon = ''; }
-    }
+    try {
+      var u = new URL(href, document.baseURI);
+      host = u.host;
+      if (!icon && (u.protocol === 'http:' || u.protocol === 'https:')) {
+        icon = u.origin + '/favicon.ico';
+      }
+    } catch (e) { /* 非法 URL：host 留空，不显示图标 */ }
 
     a.classList.add('geo-card__link');
-    if (!a.hasAttribute('target')) a.setAttribute('target', '_blank');
-    a.setAttribute('rel', 'noopener noreferrer');
 
     a.innerHTML =
       '<span class="geo-card__icon">' +
@@ -91,43 +77,49 @@ dateCreated: 2026-09-02T13:16:34.475Z
       '<span class="geo-card__arrow" aria-hidden="true">' + ARROW_SVG + '</span>';
   }
 
-  function initGeoCards() {
-    var root = document.querySelector('#geo-cards');
-    if (!root || root.dataset.geoReady) return;
-    root.dataset.geoReady = '1';
-
-    Array.prototype.forEach.call(root.children, function (el) {
-      if (el.tagName === 'A') renderCard(el);
-    });
+  function init() {
+    var cards = document.querySelectorAll('.geo-cards > a');
+    for (var i = 0; i < cards.length; i++) render(cards[i]);
   }
 
-  function mount() { initGeoCards(); }
+  // 防抖，避免 Vue 频繁更新 DOM 时反复触发
+  var timer = null;
+  function schedule() {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(init, 50);
+  }
 
-  mount();
+  function start() {
+    init();
+
+    // 监听 Vue 的 DOM 变化（SPA 核心适配）
+    if (window.MutationObserver) {
+      new MutationObserver(schedule).observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    } else {
+      setInterval(init, 1000); // 极老浏览器兜底
+    }
+  }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', mount);
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
   }
-
-  var tries = 0;
-  var timer = setInterval(function () {
-    mount();
-    if (document.querySelector('#geo-cards[data-geo-ready]') || ++tries > 30) {
-      clearInterval(timer);
-    }
-  }, 100);
 })();
 </script>
 -------------------------------------------------------------------------------------------------------------------------------->
 
 <!--------------------------------------------------------------------------------------------------------------------------------
-#geo-cards {
+.geo-cards {
   display: flex;
   flex-direction: column;
   gap: .5rem;
   margin: 1rem 0
 }
-#geo-cards .geo-card__link {
+.geo-cards .geo-card__link {
   display: flex;
   align-items: center;
   gap: .75rem;
@@ -139,11 +131,11 @@ dateCreated: 2026-09-02T13:16:34.475Z
   color: inherit!important;
   transition: border-color .15s,transform .15s
 }
-#geo-cards .geo-card__link:hover {
+.geo-cards .geo-card__link:hover {
   border-color: #4f46e5;
   transform: translateY(-1px)
 }
-#geo-cards .geo-card__icon {
+.geo-cards .geo-card__icon {
   flex-shrink: 0;
   width: 36px;
   height: 36px;
@@ -152,20 +144,20 @@ dateCreated: 2026-09-02T13:16:34.475Z
   justify-content: center;
   overflow: hidden
 }
-#geo-cards .geo-card__favicon {
+.geo-cards .geo-card__favicon {
   width: 26px;
   height: 26px;
   object-fit: contain;
   display: block
 }
-#geo-cards .geo-card__body {
+.geo-cards .geo-card__body {
   flex: 1 1 auto;
   min-width: 0;
   display: flex;
   flex-direction: column;
   gap: .1rem
 }
-#geo-cards .geo-card__title {
+.geo-cards .geo-card__title {
   font-size: .94rem;
   font-weight: 500;
   line-height: 1.4;
@@ -173,7 +165,7 @@ dateCreated: 2026-09-02T13:16:34.475Z
   overflow: hidden;
   text-overflow: ellipsis
 }
-#geo-cards .geo-card__desc {
+.geo-cards .geo-card__desc {
   font-size: .8rem;
   line-height: 1.4;
   opacity: .7;
@@ -181,7 +173,7 @@ dateCreated: 2026-09-02T13:16:34.475Z
   overflow: hidden;
   text-overflow: ellipsis
 }
-#geo-cards .geo-card__host {
+.geo-cards .geo-card__host {
   font-size: .74rem;
   line-height: 1.3;
   opacity: .5;
@@ -190,49 +182,49 @@ dateCreated: 2026-09-02T13:16:34.475Z
   text-overflow: ellipsis;
   font-family: ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace
 }
-#geo-cards .geo-card__arrow {
+.geo-cards .geo-card__arrow {
   flex-shrink: 0;
   width: 18px;
   height: 18px;
   opacity: .4;
   transition: transform .15s,opacity .15s
 }
-#geo-cards .geo-card__arrow svg {
+.geo-cards .geo-card__arrow svg {
   width: 100%;
   height: 100%;
   display: block
 }
-#geo-cards .geo-card__link:hover .geo-card__arrow {
+.geo-cards .geo-card__link:hover .geo-card__arrow {
   transform: translateX(3px);
   opacity: 1;
   color: #4f46e5
 }
-.theme--dark #geo-cards .geo-card__link,
-body.is-dark #geo-cards .geo-card__link,
-html.dark #geo-cards .geo-card__link,
-html.is-dark #geo-cards .geo-card__link {
+.theme--dark .geo-cards .geo-card__link,
+body.is-dark .geo-cards .geo-card__link,
+html.dark .geo-cards .geo-card__link,
+html.is-dark .geo-cards .geo-card__link {
   color: #e6edf3!important
 }
 @media (max-width:560px) {
-  #geo-cards .geo-card__link {
+  .geo-cards .geo-card__link {
     padding: .6rem .8rem;
     gap: .6rem
   }
-  #geo-cards .geo-card__icon {
+  .geo-cards .geo-card__icon {
     width: 32px;
     height: 32px
   }
-  #geo-cards .geo-card__favicon {
+  .geo-cards .geo-card__favicon {
     width: 22px;
     height: 22px
   }
-  #geo-cards .geo-card__title {
+  .geo-cards .geo-card__title {
     font-size: .88rem
   }
-  #geo-cards .geo-card__desc {
+  .geo-cards .geo-card__desc {
     font-size: .76rem
   }
-  #geo-cards .geo-card__host {
+  .geo-cards .geo-card__host {
     font-size: .7rem
   }
 }
