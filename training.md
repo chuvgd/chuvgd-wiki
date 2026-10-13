@@ -2,7 +2,7 @@
 title: 培训
 description: 
 published: true
-date: 2026-10-13T05:46:09.633Z
+date: 2026-10-13T12:43:10.623Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-07T09:17:14.487Z
