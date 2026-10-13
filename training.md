@@ -2,7 +2,7 @@
 title: 培训
 description: 
 published: true
-date: 2026-10-11T15:12:49.839Z
+date: 2026-10-13T05:46:09.633Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-07T09:17:14.487Z
@@ -38,6 +38,10 @@ dateCreated: 2026-09-07T09:17:14.487Z
 - 算法：C++、Linux 和 ROS2、视觉、SLAM感知和自主规划、决策、控制
 
 ## 时间轴
+
+> 具体安排可能会变动！
+{.is-info}
+
 
 ```mermaid
 gantt
