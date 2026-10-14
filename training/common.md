@@ -2,7 +2,7 @@
 title: 通识
 description: 
 published: true
-date: 2026-10-07T06:05:30.998Z
+date: 2026-10-14T06:36:54.678Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:20:09.990Z
@@ -21,7 +21,7 @@ dateCreated: 2026-09-18T18:20:09.990Z
 
 除了这些东西外，你应该也了解一些其他技术知识，例如机械组也应当知道关于布线和线材的知识，电控也应该知道螺丝的型号。
 
-一些常用的跨领域知识如下：
+一些常用的跨技术组常识知识如下：
 
 1. [线材【PNX】](https://hkustgz-robomaster-pnx.github.io/training/?doc=AewidsFxjoS6PPx9b33cQoDCnwf)、[布线（PNX）](https://hkustgz-robomaster-pnx.github.io/training/?doc=GQ79dTUmoor4w7xtyk0cbQMTnRd)
 2. 机械基本材料
