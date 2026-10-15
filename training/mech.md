@@ -2,7 +2,7 @@
 title: 机械
 description: 
 published: true
-date: 2026-10-06T16:58:13.413Z
+date: 2026-10-15T13:32:59.758Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-18T18:02:09.494Z
@@ -22,7 +22,22 @@ dateCreated: 2026-09-18T18:02:09.494Z
 
 ## 课件资源
 
-[VGD2027秋机械培训](https://wwaqn.lanzouc.com/b00tcu8tsd)
+<div class="geo-cards">
+  <a href="https://wwaqn.lanzouc.com/b00tcu8tsd">VGD2027秋机械培训 文档</a>
+</div>
+
+### 第零讲
+
+### 第一讲
+
+### 第二讲
+
+### 第三讲
+
+<div class="geo-cards">
+  <a href="https://meeting.tencent.com/cw/KD6ypb0a07">录播1</a>
+  <a href="https://meeting.tencent.com/cw/NbQzYnED99">录播2</a>
+</div>
 
 ## 其他资源
 
