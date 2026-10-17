@@ -2,7 +2,7 @@
 title: 电控
 description: 
 published: true
-date: 2026-10-12T12:25:57.471Z
+date: 2026-10-17T08:48:48.938Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -51,7 +51,7 @@ dateCreated: 2026-09-19T07:31:40.936Z
 
 <div class="geo-cards">
   <a href="/training/prog/c-1">文档</a>
-  <a href="https://serialist.lanzoup.com/b00tcunnod">课件和示例代码</a>
+  <a href="https://serialist.lanzouc.com/b00tcv53sf">课件和示例代码</a>
   <a href="https://meeting.tencent.com/crm/l6GJ6neGe4">录播1</a>
   <a href="https://meeting.tencent.com/crm/2ZvyZqjzfa">录播2</a>
 </div>
