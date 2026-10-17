@@ -2,7 +2,7 @@
 title: 工具安装
 description: 
 published: true
-date: 2026-10-17T14:54:29.307Z
+date: 2026-10-17T15:30:46.411Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-21T14:10:34.292Z
@@ -10,7 +10,7 @@ dateCreated: 2026-09-21T14:10:34.292Z
 
 # 工具安装
 
-## Keil
+## [Keil](https://www.bilibili.com/video/BV1Pc411s7C9/)
 
  - Keil 安装教程：[https://docs.baud-dance.com/docs/stm32/keil/installKeil](https://docs.baud-dance.com/docs/stm32/keil/installKeil )
  - Keil 激活教程：[https://zhuanlan.zhihu.com/p/1996010997731828516](https://zhuanlan.zhihu.com/p/1996010997731828516 )
