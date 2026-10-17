@@ -2,7 +2,7 @@
 title: 电控
 description: 
 published: true
-date: 2026-10-17T08:56:26.827Z
+date: 2026-10-17T08:58:00.344Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-19T07:31:40.936Z
@@ -39,7 +39,7 @@ dateCreated: 2026-09-19T07:31:40.936Z
 
 ## 资源
 
-### 第0讲
+### 第0讲：通识
 
 <div class="geo-cards">
   <a href="/training/common">文档</a>
@@ -47,7 +47,7 @@ dateCreated: 2026-09-19T07:31:40.936Z
   <a href="https://meeting.tencent.com/cw/2ZqmYqn539">录播2</a>
 </div>
 
-### 第1讲
+### 第1讲：编程语言和环境 
 
 <div class="geo-cards">
   <a href="/training/prog/c-1">文档</a>
@@ -56,9 +56,9 @@ dateCreated: 2026-09-19T07:31:40.936Z
   <a href="https://meeting.tencent.com/crm/2ZvyZqjzfa">录播2</a>
 </div>
 
-### 第二讲
+### 第二讲：硬件电子入门
 
-### 第三讲
+### 第三讲：嵌入式和STM32
 
 <div class="geo-cards">
   <a href="/training/embedded/1">文档</a>
@@ -70,7 +70,7 @@ dateCreated: 2026-09-19T07:31:40.936Z
 -->
 </div>
 
-### 第四讲
+### 第四讲：通信和中断
 
 <div class="geo-cards">
   <a href="/training/embedded/2">文档</a>
