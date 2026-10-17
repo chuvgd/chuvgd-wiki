@@ -2,7 +2,7 @@
 title: 工具安装
 description: 
 published: true
-date: 2026-10-17T14:45:51.550Z
+date: 2026-10-17T14:54:29.307Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-21T14:10:34.292Z
