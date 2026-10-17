@@ -2,7 +2,7 @@
 title: 嵌入式
 description: 
 published: true
-date: 2026-09-25T09:32:03.124Z
+date: 2026-10-17T10:11:44.415Z
 tags: 
 editor: markdown
 dateCreated: 2026-09-21T12:32:37.250Z
@@ -14,11 +14,7 @@ dateCreated: 2026-09-21T12:32:37.250Z
 
 ## 嵌入式课程安排
 
-1. 了解嵌入式是什么，下载 keil 和标准库（0）
-2. 标准库，GPIO，点灯（0.5）
-3. 时钟，TIM，呼吸灯（0.5）
-4. HAL 库，CubeMX，串口（0.5）
-5. 中断处理，理解通信（0.5）
+1. 了解嵌入式，下载 keil 和 cubemx，使用烧录器
+2. HAL库，GPIO和TIM，点灯和呼吸灯
+3. 通信入门，串口通信和中断流
 6. can通信，fdcan通信（1）
-
-
